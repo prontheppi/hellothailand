@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Write a Review</title>
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+
+  <section class="review-form">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="img/logo.jpg" alt="Alustem Logo" style="height: 100px;">
+    </div>
+
+    <div class="user-card">
+        <img src="https://i.pravatar.cc/100" alt="avatar" class="avatar">
+        <h3 class="name">Name Surname</h3>
+        <p class="role">🌸 Local Guide • 10 reviews • 21 pictures</p>
+        <button class="follow-btn">Follow 💖</button>
+    </div>
+
+    <!-- Rating -->
+    <div class="rating">
+      <span class="star">☆</span>
+      <span class="star">☆</span>
+      <span class="star">☆</span>
+      <span class="star">☆</span>
+      <span class="star">☆</span>
+    </div>
+
+    <!-- Review Text -->
+    <textarea placeholder="Write your review..."></textarea>
+
+    <!-- Upload -->
+    <div class="upload-box">
+      <label>
+        📷 <input type="file" hidden>
+        <span>Add picture</span>
+      </label>
+      <label>
+        🎥 <input type="file" hidden>
+        <span>Add video</span>
+      </label>
+    </div>
+
+    <!-- Buttons -->
+    <div class="form-buttons">
+      <button class="btn-cancel">Cancel</button>
+      <button class="btn-submit">Submit</button>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* Search box */
+.search-box {
+  background-color: #3b1616;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 12px;
+  min-width: 250px;
+}
+
+.search-box::placeholder {
+  color: #ddd;
+}
+
+/* Language Switch */
+.lang-switch {
+  font-size: 0.9rem;
+}
+
+/* Circle menu */
+.circle-menu {
+  width: 40px;
+  height: 40px;
+  background-color: #555;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle-menu span {
+  display: block;
+  width: 20px;
+  height: 4px;
+  background: white;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* Header */
+.gallery-header {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.gallery-header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.gallery-header p {
+  font-size: 1.5rem;
+  margin: 10px 0 20px;
+}
+
+.btn-contact {
+  display: inline-block;
+  background: #365A4C;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.divider {
+  border: none;
+  border-top: 4px solid #E35B2D;
+  margin: 30px auto 0;
+  width: 95%;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์เสมอ */
+  gap: 20px;
+  padding: 40px;
+  justify-items: center;
+}
+
+.project {
+  width: 280px;
+  text-align: center;
+}
+
+.project-img {
+  width: 100%;
+  height: 280px;
+  background: repeating-conic-gradient(#eee 0% 25%, transparent 0% 50%) 50% / 40px 40px;
+  border: 1px solid #ccc;
+}
+
+.project-title {
+  background: #b22222;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.contact-section {
+  background: #000;
+  color: white;
+  padding: 40px 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  max-width: 60%;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.contact-map iframe {
+  border-radius: 5px;
+}
+
+.bottom-bar {
+  text-align: center;
+  background: #fff;
+  color: #111;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 22px;         /* ขยายขนาดไอคอน */
+  color: white;
+  border: 2px solid white; /* เพิ่มกรอบ */
+  border-radius: 50%;      /* ทำเป็นวงกลม */
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: white;
+  color: #333; /* สีเปลี่ยนเมื่อ hover */
+}
+
+.footer-info {
+  text-align: center; /* จัดตรงกลาง */
+  font-size: 18px;    /* ขยายขนาดตัวหนังสือ */
+  color: white;
+}

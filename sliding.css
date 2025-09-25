@@ -1,0 +1,238 @@
+.casement-section {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.casement-header {
+  position: relative;
+  background: url('img/sliding/slide_cover.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: left;
+  padding: 80px 40px;
+}
+
+.casement-header h2 {
+  background: #315c4d;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.casement-header p {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn-contact {
+  display: inline-block;
+  background: #a52a2a;
+  color: #fff;
+  padding: 12px 25px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.btn-contact:hover {
+  background: #8b1e1e;
+}
+
+.casement-features {
+  background: #fff;
+  padding: 50px 30px;
+}
+
+.casement-features h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.casement-features ul {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.casement-section {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* หัวข้อบนพื้นหลัง */
+.casement-banner {
+  background: #315c4d;
+  color: white;
+  padding: 20px 40px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ส่วนรูปพื้นหลัง */
+.casement-bg {
+  position: relative;
+  background: url('img/sliding/slide_cover.jpg') no-repeat center center/cover;
+  height: 300px; /* ปรับความสูงได้ */
+}
+
+.casement-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.btn-contact {
+  display: inline-block;
+  background: #a52a2a;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.btn-contact:hover {
+  background: #8b1e1e;
+}
+
+/* ส่วนล่าง Key Features */
+.casement-features {
+  background: #fff;
+  padding: 50px 30px;
+}
+
+.casement-features h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.casement-features ul {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+.features-section {
+  background: #fafafa;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.features-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.features-section ul li {
+  margin-bottom: 10px;
+}
+
+.features-image {
+  text-align: center;
+}
+
+.features-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.considerations-section {
+  background: #fafafa;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.considerations-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.considerations-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.considerations-section ul li {
+  margin-bottom: 10px;
+}
+
+.considerations-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.considerations-images img {
+  width: 48%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.usage-section {
+  background: #f9f9f9;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.usage-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.usage-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.usage-section ul li {
+  margin-bottom: 10px;
+}
+
+.usage-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.usage-images img {
+  width: 48%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
