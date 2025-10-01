@@ -5,6 +5,8 @@
   <title>Windows & Doors</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="index.css">
   <style>
     .hero {
@@ -36,14 +38,14 @@
 
     <!-- Navbar links -->
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-      <li class="nav-item"><a class="nav-link text-white" href="main.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery Works</a></li>
       <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact us</a></li>
     </ul>
 
     <!-- Language Switch -->
     <div class="lang-switch ms-3">
-      <a href="#" class="text-white fw-bold">TH</a><span class="text-muted">/EN</span>
+      <a href="#" class="text-white" id="langBtn">TH</a><span class="text-muted">/EN</span>
     </div>
 
     <!-- Circle Menu Icon -->
@@ -66,7 +68,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10">
-        <h2 class="fw-bold">
+        <h2 class="fw-bold1" >
           High-Quality Doors & Windows <br>
           for Your Dream Home
         </h2>
@@ -78,29 +80,27 @@
           and have a team of experts ready to guide you, ensuring you get the perfect doors 
           and windows for your home.
         </p>
-        <a href="#contact" class="btn btn-danger mt-3">Please contact us</a>
+        <a href="#contact" class="btn-danger-contact">Please contact us</a>
         <br><br>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-5 product-text">
-  <div class="container">
-    <!-- part 1 : Product Text -->
+<section class="product-section">
+    <div class="content-box" >
     <div class="mb-5">
       <h2 class="fw-bold">Our Doors & Windows Products</h2>
-      <p>
+      <p1>
         At <strong>Alustem</strong>, we believe that doors and windows are more than just entry points; 
         they are key elements that define your home's beauty, comfort, and efficiency. 
-        Our products feature leading glass innovations, including 
-        <strong>Double Glass</strong> and <strong>Insulated Glass Units (IGU)</strong>, 
+        Our products feature leading glass innovations, including  <strong>Double Glass</strong> and <strong>Insulated Glass Units (IGU)</strong>, 
         which provide excellent <strong>Heat Protection</strong> from the outside. This keeps
-        your home cool while significantly reducting energy consumption.
-      </p>
-      <p>
-        They also offer superior <strong>Soundproof</strong> qualities, making your home 
-        a truly tranquil <strong>Private Zone</strong>. For maximum security, we utilize 
+        your home cool while significantly reducting energy consumption. They also offer superior <strong>Soundproof</strong> qualities, making your home 
+        a truly tranquil <strong>Private Zone</strong>.
+      </p1>
+      <p1>
+         For maximum security, we utilize 
         high-strength <strong>Laminated Glass</strong> and <strong>Tempered Glass</strong>, 
         fortified with <strong>EURO Profile aluminum</strong> frames and <strong>uPVC</strong> 
         that ensure durability and effective <strong>Water Proofing</strong>. We also specialize 
@@ -108,16 +108,19 @@
         each designed to be both safe and aesthetically pleasing.
         You can trust that all our products will improve <strong>Air Flow</strong>, making your
         home a more comfortable place to live.
-      </p>
-      <p><strong>Find the perfect doors & windows for your dream home.</strong></p>
+      </p1>
+      <br>
+      <p1><strong>Find the perfect doors & windows for your dream home.</strong></p1>
     </div>
+  </div>
 </section>
 
 <!-- part 2 : Casement Swing Doors -->
 <section class="product-section">
+  <div class="content-box">
   <h2 class="fw-bold"> Casement Windows & Swing Doors </h2>
-      <p >
-        <em>Classic Design, Exceptional Functionality.</em> 
+      <p>
+        <strong>Classic Design, Exceptional Functionality.</strong> 
         Our casement windows and swing doors allow for maximum ventilation 
         and are easy to clean from the inside. They are ideal for homes 
         that value a simple yet highly functional design.
@@ -136,6 +139,7 @@
   </div>
 
   <a href="casement.html" class="btn-readmore">Read more ...</a>
+  </div>
 </section>
 
 <!-- part 3 : Awning Windows -->
@@ -260,10 +264,33 @@
   </div>
 
   <a href="contact.html" class="btn-readmore">Read more ...</a>
+
+  <section class="about-logo">
+
+  <div class="about-header">
+    <h2> About us </h2> 
+    <img src="img/logo.jpg" alt="Alustem Logo"  style="height: 80px;">    
+  </div>
+  <div>
+    <p style="font-size: 3em;">
+      At <strong>Alustem</strong>, we believe the best doors and windows are those that perfectly meet our clients' needs.
+      We pay close attention to every detail, from selecting the right <strong>high-quality products</strong> for each
+      project to the manufacturing process, ensuring you receive the best possible items.
+      <strong>We are ready to provide excellent advice and consultation</strong> to help you choose doors and windows
+      that are <strong>beautiful, convenient to use</strong>, and <strong>durable</strong> to meet your specific goals.
+  </p>
+
+    <p style="font-size: 3em;">
+      Our <strong>installation team, with over 10 years of experience in the area</strong>, has a deep understanding of
+      local conditions and factors that affect installation. This ensures our work is highly precise and meets the highest
+      standards. Most importantly, we offer <strong>excellent after-sales service</strong> to support you every step of
+      the way, giving you complete peace of mind.
+  </p>
 </section>
 
 
-<section class="container my-5">
+
+  <section class="container my-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="fw-bold">Gallery works</h2>
     <a href="gallery.html" class="btn btn-success">More Projects ...</a>
@@ -301,6 +328,9 @@
     </div>
   </div>
 </section>
+
+</section>
+
 
 <section class="py-5" style="background-color: #365A4C; color:white;">
   <div class="container">
@@ -373,4 +403,23 @@
 
 
 </body>
+
+
+<script>
+  const langBtn = document.getElementById("langBtn");
+  let currentLang = "TH";
+
+  langBtn.addEventListener("click", () => {
+    if (currentLang === "TH") {
+      currentLang = "EN";
+      langBtn.textContent = "EN";
+      // 👉 ตรงนี้สามารถใส่โค้ดเปลี่ยนเนื้อหาเว็บเป็นภาษาอังกฤษได้
+    } else {
+      currentLang = "TH";
+      langBtn.textContent = "TH";
+      // 👉 ตรงนี้สามารถใส่โค้ดเปลี่ยนเนื้อหาเว็บเป็นภาษาไทยได้
+    }
+  });
+</script>
+
 </html>

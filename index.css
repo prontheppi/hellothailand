@@ -1,3 +1,8 @@
+body {
+  background-color: #000;
+}
+
+
 /* Search box */
 .search-box {
   background-color: #3b1616;
@@ -12,8 +17,46 @@
   color: #ddd;
 }
 
+.fw-bold {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.0rem;
+  max-width: 1500pt;
+}
+
+.fw-bold1 {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 3.5rem;
+  max-width: 1500pt;
+}
+
+.fw-bold p {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.2rem;
+  max-width: 1000pt;
+}
+
+.mt-3 {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.5rem;
+
+}
+
+.btn-danger-contact {
+  display: inline-block;
+  padding: 15px 100px;
+  background-color: #b32727;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-size: 1.3em;
+}
+
+
 /* Language Switch */
 .lang-switch {
+  font-family: 'Sarabun', sans-serif;
   font-size: 0.9rem;
 }
 
@@ -50,8 +93,9 @@ section p {
 .btn-success {
   background-color: #365A4C;
   border: none;
-  padding: 10px 25px;
+  padding: 10px 100px;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 section {
@@ -69,9 +113,11 @@ h2 {
 }
 
 .card {
+  font-family: 'Sarabun', sans-serif;
   border: none;
 }
 .card-body {
+
   background-color: #f9f9f9;
   border-radius: 8px;
 }
@@ -90,10 +136,12 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 90%;        
+  max-width: 2000px;  
 }
 
 .contact-info {
-  max-width: 60%;
+  max-width: 90%;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -150,35 +198,50 @@ h2 {
 }
 
 .product-section {
-  text-align: center;
-  padding: 60px 20px;
+  font-family: 'Sarabun', sans-serif;
+  text-align: left;
+  padding: 10px 70px;
+  margin-left: 150px;
   background-color: #f9f9f9;
+  max-width: 1500px;
 }
 
 .product-section h2 {
-  font-size: 2.5rem;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 3.0rem;
   margin-bottom: 15px;
   font-weight: bold;
 }
 
 .product-section p {
-  font-size: 1.1rem;
+  font-family: 'Sarabun', sans-serif;
+  text-align: left;
+  font-size: 1.5rem;
   color: #555;
-  max-width: 800px;
-  margin: 0 auto 40px;
+  max-width: 1500px;
+}
+
+.product-section p1 {
+  font-family: 'Sarabun', sans-serif;
+  text-align: left;
+  font-size: 2.3rem;
+  color: #555;
+  max-width: 1400px;
 }
 
 .product-gallery {
+  font-family: 'Sarabun', sans-serif;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
 .product-item img {
-  width: 500px;
-  height: 500px;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 10%;
   border: 5px solid #eee;
@@ -192,21 +255,108 @@ h2 {
 
 .btn-readmore {
   display: inline-block;
-  padding: 12px 25px;
+  padding: 15px 100px;
   background-color: #3d5d48;
   color: white;
   font-weight: bold;
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.3s ease;
+  font-size: 1.3em;
 }
+
+
 
 .btn-readmore:hover {
   background-color: #2a4033;
 }
 
-.product-text p {
-  font-size: 1.5rem;   /* ปรับขนาด เช่น 16px → 1rem, 18px → 1.1rem */
+.product-text h2 {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 3.5rem;   /* ปรับขนาด เช่น 16px → 1rem, 18px → 1.1rem */
   line-height: 1.8;    /* ทำให้เว้นบรรทัดสวยขึ้น */
   color: #333;         /* ทำให้ตัวอักษรชัดขึ้น */
+  max-width: 3000px;
+}
+
+.product-text p {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 2.0rem;   /* ปรับขนาด เช่น 16px → 1rem, 18px → 1.1rem */
+  line-height: 1.8;    /* ทำให้เว้นบรรทัดสวยขึ้น */
+  color: #333;         /* ทำให้ตัวอักษรชัดขึ้น */
+  text-align: left;
+  max-width: 3000px;
+}
+
+.content-box {
+  border: 2px solid #fff;  /* เส้นกรอบสีขาว */
+  padding: 10px;
+  width: 100%;
+  max-width: 3000px;
+  line-height: 1.6;
+  background-color: #fff;
+  min-width: 200px;
+}
+
+.about-section {
+  background-color: #000;   /* พื้นหลังดำ */
+  color: #fff;              /* ตัวอักษรขาว */
+  border: 2px solid #fff;   /* กรอบเส้นสีขาว */
+  border-radius: 10px;      /* มุมโค้ง */
+  padding: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  font-family: "TH Sarabun New", sans-serif;
+  line-height: 1.8;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2); /* เพิ่มแสงจางๆ รอบกล่อง */
+}
+
+.about-section {
+  background-color: #000;   /* พื้นหลังดำ */
+  color: #fff;              /* ตัวอักษรขาว */
+  border: 2px solid #fff;   /* กรอบเส้นสีขาว */
+  border-radius: 10px;      /* มุมโค้ง */
+  padding: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  font-family: "TH Sarabun New", sans-serif;
+  line-height: 1.8;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2); /* เพิ่มแสงจางๆ รอบกล่อง */
+}
+
+.about-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-logo {
+  display: block;
+  width: 1200px;
+  font-size: 10px; 
+}
+
+.about-section p {
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.about-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* คอลัมน์ซ้ายกินพื้นที่ที่เหลือ, ขวาพอดีกับรูป */
+  align-items: center;             /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+  padding: 10px 20px;
+}
+
+.about-header h2 {
+  margin: 0;             /* เอา margin ออกเพื่อไม่ให้กินพื้นที่เกิน */
+  font-size: 3rem;
+}
+
+.about-header img {
+  height: 100px;          
+}
+
+.about-detail {
+  font-size: 5em;
 }
