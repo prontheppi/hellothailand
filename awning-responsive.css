@@ -1,0 +1,121 @@
+/* ================= Responsive for Awning Page ================= */
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .casement-header {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .casement-header h2 {
+    font-size: 1.6rem;
+    padding: 10px 20px;
+  }
+
+  .casement-header p {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .casement-overlay {
+    max-width: 80%;
+    font-size: 0.95rem;
+    left: 10px;
+    right: 10px;
+  }
+
+  .considerations-images img,
+  .usage-images img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .casement-header {
+    padding: 40px 15px;
+  }
+
+  .casement-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .casement-header p {
+    font-size: 0.9rem;
+  }
+
+  .casement-bg {
+    height: 200px;
+  }
+
+  .casement-overlay {
+    bottom: 10px;
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .features-section h2,
+  .considerations-section h2,
+  .usage-section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .features-section ul,
+  .considerations-section ul,
+  .usage-section ul {
+    font-size: 1rem;
+  }
+
+  .considerations-images,
+  .usage-images {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .considerations-images img,
+  .usage-images img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .casement-header {
+    padding: 30px 10px;
+  }
+
+  .casement-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .casement-header p {
+    font-size: 0.8rem;
+  }
+
+  .btn-contact {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .casement-overlay {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .features-section h2,
+  .considerations-section h2,
+  .usage-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .features-section ul li,
+  .considerations-section ul li,
+  .usage-section ul li {
+    font-size: 0.9rem;
+  }
+}

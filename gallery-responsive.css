@@ -1,0 +1,103 @@
+/* ================= Responsive for Gallery Page ================= */
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .gallery-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .gallery-header p {
+    font-size: 1.2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* เหลือ 2 คอลัมน์ */
+    gap: 15px;
+    padding: 30px;
+  }
+
+  .project {
+    width: 240px;
+  }
+
+  .project-img {
+    height: 220px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .gallery-header {
+    padding: 30px 15px;
+  }
+
+  .gallery-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .gallery-header p {
+    font-size: 1rem;
+  }
+
+  .btn-contact {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* แสดงทีละ 1 คอลัมน์ */
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .project {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .project-img {
+    height: 200px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contact-map iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .gallery-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .gallery-header p {
+    font-size: 0.9rem;
+  }
+
+  .project-title {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .footer-info {
+    font-size: 14px;
+  }
+}

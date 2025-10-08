@@ -1,0 +1,95 @@
+/* ================= Responsive for Contact Page ================= */
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .contact-form, .contact-map {
+    min-width: 100%;
+  }
+
+  .contact-map {
+    height: 350px;
+  }
+
+  .contact-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  body {
+    background: #173d36; /* ทำให้กลมกลืน */
+  }
+
+  .contact-container {
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+
+  .contact-form {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+
+  .contact-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .contact-map {
+    height: 250px;
+  }
+
+  .social-icons {
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin: 0 8px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 15px;
+  }
+
+  .contact-form h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .contact-form label {
+    font-size: 0.9rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .btn-submit {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .contact-map {
+    height: 200px;
+  }
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+  }
+}
