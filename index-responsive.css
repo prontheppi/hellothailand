@@ -1,0 +1,23 @@
+/* ================= Responsive ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .fw-bold1 { font-size: 2rem; }
+  .product-item img { width: 250px; height: 250px; }
+  .contact-container { flex-direction: column; align-items: center; }
+  .contact-map iframe { height: 250px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero img { width: 100%; }
+  .fw-bold1 { font-size: 1.6rem; }
+  .btn-danger-contact,
+  .btn-readmore { padding: 12px 25px; font-size: 1rem; }
+  .product-item img { width: 90%; height: auto; }
+  .about-section, .content-box { padding: 20px; }
+  .about-section h2 { font-size: 1.5rem; }
+  .about-section p { font-size: 1rem; }
+  .contact-info { text-align: center; }
+  .social-icons a { width: 35px; height: 35px; font-size: 16px; line-height: 32px; }
+}
