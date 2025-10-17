@@ -2,167 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Windows & Doors</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="bifold.css">
-  <link rel="stylesheet" href="bifold-responsive.css">
-  
+  <title>Casement Windows & Swing Doors | Alustem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    .hero {
-      background: url('windows-doors.jpg') no-repeat center center/cover;
-      height: 100vh;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    }
+    body { font-family: 'Sarabun', sans-serif; }
   </style>
 </head>
-<body>
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-black py-2">
-  <div class="container-fluid">
+<body class="bg-white text-gray-900">
 
-    <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="img/logo.jpg" alt="Alustem Logo" style="height: 40px;">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between bg-black text-white px-6 py-3">
+    <a href="index.html" class="flex items-center">
+      <img src="img/logo.jpg" alt="Alustem Logo" class="h-10">
     </a>
 
-    <!-- Search -->
-    <form class="d-flex mx-3 flex-grow-1">
-      <input class="form-control search-box" type="search" placeholder="Search" aria-label="Search">
-    </form>
+    <input type="text" placeholder="Search"
+           class="bg-[#3b1616] text-white px-3 py-2 rounded outline-none placeholder-gray-300 w-64">
 
-    <!-- Navbar links -->
-    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-      <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery Works</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact us</a></li>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="index.html" class="hover:text-red-400">Home</a></li>
+      <li><a href="gallery.html" class="hover:text-red-400">Gallery Works</a></li>
+      <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
     </ul>
+  </nav>
 
-    <!-- Language Switch -->
-    <div class="lang-switch ms-3">
-      <a href="#" class="text-white fw-bold">TH</a><span class="text-muted">/EN</span>
-    </div>
+  <!-- Banner -->
+  <section class="bg-[#315c4d] text-white px-10 py-6">
+    <h2 class="text-3xl font-bold"> Folding/Bi-fold Doors & Windows</h2>
+  </section>
 
-    <!-- Circle Menu Icon -->
-    <div class="circle-menu ms-3">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-  </div>
-</nav>
-
-<section class="casement-section">
-  <!-- หัวข้อบนพื้นหลัง -->
-  <div class="casement-banner">
-    <h2>Casement Windows & Swing Doors</h2>
-  </div>
-
-  <!-- พื้นหลังเป็นรูป -->
-  <div class="casement-bg">
-    <div class="casement-overlay">
+  <!-- Hero Section -->
+  <section class="relative bg-[url('img/bifold/bifold_cover.jpg')] bg-cover bg-center h-[300px]">
+    <div class="absolute bottom-5 left-5 bg-black/60 text-white p-5 rounded max-w-lg">
       <p>
-        <strong>Casement windows and swing doors</strong> are timeless designs that remain incredibly
-        popular. With their simple yet durable mechanism, they allow your home to benefit
-        from abundant natural ventilation and create a bright, open atmosphere.
+        <strong> Folding or bi-fold doors and windows </strong> are the ultimate design for creating a seamless connection
+        between your indoor and outdoor spaces. With their simple and modern folding mechanism, they allow you to
+        open up an entire wall, creating a spacious and luxurious feel.
       </p>
-      <a href="contact.html" class="btn-contact">Please contact us</a>
-    </div>
-  </div>
-</section>
-
-
-<section class="features-section">
-  <div class="container">
-    <h2>Key Features & Benefits</h2>
-    <ul>
-      <li><strong>Superior Ventilation:</strong> Casement windows open to a full 90 degrees, allowing for excellent airflow and effective <strong>cross-ventilation</strong> within your home.</li>
-      <li><strong>Enhanced Security:</strong> When fully closed, the multi-point locking system secures the sash tightly to the frame, providing exceptional <strong>security</strong> against forced entry.</li>
-      <li><strong>Energy Efficiency:</strong> The tight seal between the sash and frame provides superior insulation, helping to keep your home cool and reducing your <strong>energy bills</strong>.</li>
-      <li><strong>Easy to Maintain:</strong> The full-opening design makes it simple and safe to clean both the inside and outside of the window from within your home.</li>
-    </ul>
-  </div>
-
-  <!-- รูปภาพ -->
-  <div class="features-image">
-    <img src="img/casement/casement101.jpg" alt="Casement Windows Feature">
-  </div>
-</section>
-
-
-<section class="considerations-section">
-  <div class="container">
-    <h2>Considerations</h2>
-    <ul>
-      <li><strong>Space Requirement:</strong> Since the sash swings outward, it requires clearance space. This may not be ideal for homes with narrow walkways or limited exterior space.</li>
-      <li><strong>Size Limitations:</strong> To maintain stability, <strong>casement window</strong> sashes are generally smaller compared to other window types, which can limit the overall glass area.</li>
-    </ul>
-  </div>
-
-  <!-- รูปภาพ -->
-  <div class="considerations-images">
-    <img src="img/casement/casement102.jpg" alt="Casement Window Space Requirement">
-
-  </div>
-</section>
-
-
-<section class="usage-section">
-  <div class="container">
-    <h2>Usage & Application Guide</h2>
-    <ul>
-      <li><strong>Casement Windows:</strong> An excellent choice for <strong>kitchens and bathrooms</strong> that need good ventilation, as well as living rooms where you want to maximize natural light and airflow.</li>
-      <li><strong>Swing Doors:</strong> Ideal for front entryways, balcony doors, or doors leading to a garden, providing a sophisticated and secure entrance.</li>
-    </ul>
-  </div>
-
-  <!-- รูปภาพ -->
-  <div class="usage-images">
-    <img src="img/casement/casement103.jpg" alt="Casement Windows">
-
-  </div>
-</section>
-
-
-   <section class="contact-section">
-    <div class="contact-container">
-
-      <!-- Left Side: Info -->
-      <div class="contact-info">
-        <p>23/655 Pannasap 8 Soi Hua-Hin88,<br>
-          Hua-Hin, Prachuap Khiri Khan 77110</p>
-
-        <p>081-898-6397<br>
-          ldsbuildora@gmail.com</p>
-
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
-      <!-- Right Side: Map -->
-      <div class="contact-map">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.2285153321924!2d99.9486!3d12.5684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fda52ff!2sHua%20Hin!5e0!3m2!1sen!2sth!4v1701234567890"
-          width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-      </div>
-
+      <a href="contact.html"
+         class="inline-block mt-3 bg-[#a52a2a] hover:bg-[#8b1e1e] text-white px-4 py-2 rounded font-semibold transition">
+         Please contact us
+      </a>
     </div>
   </section>
 
-  <!-- Bottom Bar -->
-  <div class="bottom-bar">
-    <p>@2025 HelloThailand. All rights reserved.</p>
-  </div>
+  <!-- Features -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Key Features & Benefits</h2>
+      <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
+        <li><strong>Full Opening:</strong> The folding mechanism allows the entire system to be stacked neatly to one side, providing a complete opening and an unobstructed passage.</li>
+        <li><strong>Aesthetic Appeal:</strong> Folding doors create a bold and luxurious statement, elevating the overall look of your home.</li>
+        <li><strong>Panoramic Views:</strong> The large glass panels offer a stunning, panoramic view of your surroundings.</li>
+        <li><strong>Weather Resistant:</strong> Our <strong>bi-fold doors </strong> come with a robust sealing system that provides superior protection against rain and wind.</li>
+      </ul>
 
+      <div class="text-center mt-10">
+        <img src="img/bifold/bifold101.jpg" alt="Casement Windows Feature"
+             class="rounded-lg shadow-md inline-block max-w-full h-auto">
+      </div>
+    </div>
+  </section>
+
+  <!-- Considerations -->
+  <section class="bg-gray-50 py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Considerations</h2>
+      <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
+        <li><strong>Stacking Space:</strong> When fully opened, the folded panels require space to stack on one or both sides, which needs to be considered during the design phase.</li>
+        <li><strong>Higher Cost:</strong> Due to the complex mechanism and larger size, they are generally more expensive than other door and window types.</li>
+      </ul>
+
+      <div class="flex justify-center mt-10">
+        <img src="img/biflod002.jpg" alt="Casement Space"
+             class="rounded-lg shadow-md max-w-[600px] w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- Usage -->
+  <section class="bg-gray-100 py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Usage & Application Guide</h2>
+      <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
+        <li><strong>Indoor-Outdoor Flow:</strong> Idel for connecting living rooms to gardens, pools, or patios, creating a seamless transition.</li>
+        <li><strong>Commercial Spaces:</strong> A great choice for restaurants and cafes that want to create an open and inviting atmosphere.</li>
+        <li><strong>Entertaining Areas:</strong> Perfect for large entertaining spaces where you want to provide a sense of luxury and grand scale.</li>
+      </ul>
+
+      <div class="flex justify-center mt-10">
+        <img src="img/bifold/bifold103.jpg" alt="Casement Usage"
+             class="rounded-lg shadow-md max-w-[600px] w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-black text-white py-16 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+      <div>
+        <p>23/655 Pannasap 8 Soi Hua-Hin88,<br> Hua-Hin, Prachuap Khiri Khan 77110</p>
+        <p class="mt-4">081-898-6397<br> ldsbuildora@gmail.com</p>
+
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.2285153321924!2d99.9486!3d12.5684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fda52ff!2sHua%20Hin!5e0!3m2!1sen!2sth!4v1701234567890"
+        class="rounded-lg w-full md:w-2/3 h-[400px]" allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center py-4 font-semibold text-gray-800">
+    © 2025 HelloThailand. All rights reserved.
+  </footer>
 
 </body>
+</html>
