@@ -5,6 +5,8 @@
   <title>Windows & Doors</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
   <style>
     body { font-family: 'Sarabun', sans-serif; }
   </style>
@@ -52,10 +54,10 @@
   </section>
 
   <!-- part 1 : Our Doors & Windows Products -->
-  <section class="bg-white text-gray-900 py-16 px-8">
+  <section class="bg-white text-gray-900 py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold mb-8 text-gray-800">Our Doors & Windows Products</h2>
-      <p class="text-lg mb-6">
+      <p class="text-lg mb-3">
         At <strong>Alustem</strong>, we believe that doors and windows are more than just entry points; 
         they are key elements that define your home's beauty, comfort, and efficiency. 
         Our products feature leading glass innovations, including  <strong>Double Glass</strong> and <strong>Insulated Glass Units (IGU)</strong>, 
@@ -63,7 +65,7 @@
         your home cool while significantly reducting energy consumption. They also offer superior <strong>Soundproof</strong> qualities, making your home 
         a truly tranquil <strong>Private Zone</strong>.
       </p>
-      <p class="text-lg mb-6">
+      <p class="text-lg mb-3">
         For maximum security, we utilize 
         high-strength <strong>Laminated Glass</strong> and <strong>Tempered Glass</strong>, 
         fortified with <strong>EURO Profile aluminum</strong> frames and <strong>uPVC</strong> 
@@ -79,47 +81,46 @@
     </div>
   </section>
 
+  <!-- ✅ part 2 : Casement Swing Doors -->
+<section id="casement-section" class="bg-white text-gray-900 py-8 px-4">
+  <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold mb-8 text-gray-800">Casement Windows & Swing Doors</h2>
 
-    <!-- part 2 : Casement Swing Doors -->
-    <section class="bg-white text-gray-900 py-16 px-8">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold mb-8 text-gray-800"> Casement Windows & Swing Doors </h2>
-      <p class="text-lg mb-6">
-        <strong>Classic Design, Exceptional Functionality.</strong> 
-        Our casement windows and swing doors allow for maximum ventilation 
-        and are easy to clean from the inside. They are ideal for homes 
-        that value a simple yet highly functional design.
+      <p class="text-lg mb-3">
+        <strong>Classic Design, Exceptional Functionality.</strong>
+        Our casement windows and swing doors allow for maximum ventilation...
       </p>
 
-      <p class="text-lg mb-6">
-        For maximum security, we utilize 
-        high-strength <strong>Laminated Glass</strong> and <strong>Tempered Glass</strong>, 
-        fortified with <strong>EURO Profile aluminum</strong> frames and <strong>uPVC</strong> 
-        that ensure durability and effective <strong>Water Proofing</strong>. We also specialize 
-        in custom installations of <strong>Shower Screens</strong> and <strong>Balcony Glass,</strong>
-        each designed to be both safe and aesthetically pleasing.
-        You can trust that all our products will improve <strong>Air Flow</strong>, making your
-        home a more comfortable place to live.
-      </p>
-
-      <!-- Gallery -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <img src="img/casement001.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="img/casement002.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="img/casement003.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
+      <!-- ✅ Gallery -->
+      <div id="casement-gallery" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="img/casement001.jpg" data-lightbox="casement" data-title="Casement 1">
+          <img src="img/casement001.jpg"
+              class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        </a>
+        <a href="img/casement002.jpg" data-lightbox="casement" data-title="Casement 2">
+          <img src="img/casement002.jpg"
+              class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        </a>
+        <a href="img/casement003.jpg" data-lightbox="casement" data-title="Casement 3">
+          <img src="img/casement003.jpg"
+              class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        </a>
       </div>
 
       <div class="mt-10 text-center">
-        <a href="casement.html" class="bg-green-900 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">Read more ...</a>
+        <a href="casement.html"
+          class="bg-green-900 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">
+          Read more ...
+        </a>
       </div>
     </div>
-  </section> 
+  </section>    
   
     <!-- part 3 : Awning Windows -->
-    <section class="bg-white text-gray-900 py-16 px-8">
+    <section id= "awning-gallery" class="bg-white text-gray-900 py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold mb-8 text-gray-800"> Awning Windows </h2>
-      <p class="text-lg mb-6">
+      <p class="text-lg mb-3">
         <strong>Ventilation with Privacy and Protection.</strong> 
         Awning windows are designed to open outwards, providing excellent airflow while protecting your space from rain. 
         They are a perfect solution for <strong>bathrooms</strong> and <strong>kitchens</strong>.
@@ -139,10 +140,10 @@
   </section>
 
     <!-- part 4 : Sliding Doors & Windows -->
-    <section class="bg-white text-gray-900 py-16 px-8">
+    <section class="bg-white text-gray-900 py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold mb-8 text-gray-800"> Sliding Doors & Windows </h2>
-      <p class="text-lg mb-6">
+      <p class="text-lg mb-3">
         <strong>Space-Saving and Sleek.</strong> 
         Our <strong>sliding doors and windows</strong> are the perfect choice for limited spaces. 
         Their modern design provides a seamless connection between your indoor and outdoor areas, 
@@ -163,10 +164,10 @@
   </section>
 
   <!-- part 5 : Folding/Bi-fold Doors & Windows -->
-  <section class="bg-white text-gray-900 py-16 px-8">
+  <section class="bg-white text-gray-900 py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold mb-8 text-gray-800"> Folding/Bi-fold Doors & Windows </h2>
-      <p class="text-lg mb-6">
+      <p class="text-lg mb-3">
         <strong>Connect Your Indoor and Outdoor Spaces.</strong> 
         Folding or <strong>bi-fold doors</strong> are designed to open up an entire wall, 
         creating a stunning, seamless transition. 
@@ -188,10 +189,10 @@
   </section>
 
   <!-- part 6 : Hanging/Sliding Barn Doors -->
-  <section class="bg-white text-gray-900 py-16 px-8">
+  <section class="bg-white text-gray-900 py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold mb-8 text-gray-800"> Hanging/Sliding Barn Doors </h2>
-      <p class="text-lg mb-6">
+      <p class="text-lg mb-3">
         <strong>A Modern and Space-Saving Statement.</strong> 
         Our <strong>Hanging/sliding barn doors</strong> add a bold, modern touch to any interior 
         while helping you save space. They are a stylish solution for separating rooms 
@@ -212,10 +213,10 @@
   </section>
 
   <!-- part 7 : Special Doors & Windows -->
-  <section class="bg-white text-gray-900 py-16 px-8">
+  <section class="bg-white text-gray-900 py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold mb-8 text-gray-800"> Special Doors & Windows </h2>
-      <p class="text-lg mb-6">
+      <p class="text-lg mb-3">
         <strong>Versatility in a Single Frame.</strong> 
         <strong>Special windows and doors</strong> offer a smart solution by integrating multiple 
         functions into one unit, such as adding a casement window to a fixed panel. 
@@ -236,39 +237,74 @@
   </section>
 
   <!-- Gallery Section -->
-<section class="max-w-6xl mx-auto my-12 px-6">
-  <div class="flex justify-between items-center mb-6">
-    <h2 class="text-3xl font-bold text-gray-900">Gallery Works</h2>
-    <a href="gallery.html"
-       class="bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded-md font-semibold transition">
-      More Projects ...
-    </a>
-  </div>
-
+  <section id="project-gallery" class="max-w-6xl mx-auto py-16 px-6">
+  <h2 class="text-3xl font-bold mb-8 text-center">Gallery Works</h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <!-- Project 1 -->
-    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-      <img src="project1.jpg" alt="Project 1" class="w-full h-64 object-cover">
-      <div class="bg-red-600 text-white text-center font-bold py-3">
-        Project 1
-      </div>
+    <!-- ✅ Project 1 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition relative group">
+      <a href="img/project1/1.jpg" data-lightbox="project1" data-title="Project 1 - Image 1">
+        <img src="img/project1/1.jpg" alt="Project 1" class="w-full h-64 object-cover group-hover:opacity-90 transition">
+      </a>
+      <div class="bg-red-600 text-white text-center font-bold py-3">Project 1</div>
+      <a href="img/project1/2.jpg" data-lightbox="project1" data-title="Project 1 - Image 2" class="hidden"></a>
+      <a href="img/project1/3.jpg" data-lightbox="project1" data-title="Project 1 - Image 3" class="hidden"></a>
+      <a href="img/project1/4.jpg" data-lightbox="project1" data-title="Project 1 - Image 4" class="hidden"></a>
+      <a href="img/project1/5.jpg" data-lightbox="project1" data-title="Project 1 - Image 5" class="hidden"></a>
     </div>
 
-    <!-- Project 2 -->
-    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-      <img src="project2.jpg" alt="Project 2" class="w-full h-64 object-cover">
-      <div class="bg-red-600 text-white text-center font-bold py-3">
-        Project 2
-      </div>
+    <!-- ✅ Project 2 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition relative group">
+      <a href="img/project2/1.jpg" data-lightbox="project2" data-title="Project 2 - Image 1">
+        <img src="img/project2/1.jpg" alt="Project 2" class="w-full h-64 object-cover group-hover:opacity-90 transition">
+      </a>
+      <div class="bg-red-600 text-white text-center font-bold py-3">Project 2</div>
+      <a href="img/project2/2.jpg" data-lightbox="project2" data-title="Project 2 - Image 2" class="hidden"></a>
+      <a href="img/project2/3.jpg" data-lightbox="project2" data-title="Project 2 - Image 3" class="hidden"></a>
     </div>
 
-    <!-- Project 3 -->
-    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-      <img src="project3.jpg" alt="Project 3" class="w-full h-64 object-cover">
-      <div class="bg-red-600 text-white text-center font-bold py-3">
-        Project 3
-      </div>
+    <!-- ✅ Project 3 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition relative group">
+      <a href="img/project3/1.jpg" data-lightbox="project3" data-title="Project 3 - Image 1">
+        <img src="img/project3/1.jpg" alt="Project 3" class="w-full h-64 object-cover group-hover:opacity-90 transition">
+      </a>
+      <div class="bg-red-600 text-white text-center font-bold py-3">Project 3</div>
+      <a href="img/project3/2.jpg" data-lightbox="project3" data-title="Project 3 - Image 2" class="hidden"></a>
+      <a href="img/project3/3.jpg" data-lightbox="project3" data-title="Project 3 - Image 3" class="hidden"></a>
+      <a href="img/project3/4.jpg" data-lightbox="project3" data-title="Project 3 - Image 4" class="hidden"></a>
     </div>
+
+    <!-- ✅ Project 4 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition relative group">
+      <a href="img/project4/1.jpg" data-lightbox="project4" data-title="Project 4 - Image 1">
+        <img src="img/project4/1.jpg" alt="Project 4" class="w-full h-64 object-cover group-hover:opacity-90 transition">
+      </a>
+      <div class="bg-red-600 text-white text-center font-bold py-3">Project 4</div>
+      <a href="img/project4/2.jpg" data-lightbox="project4" data-title="Project 4 - Image 2" class="hidden"></a>
+      <a href="img/project4/3.jpg" data-lightbox="project4" data-title="Project 4 - Image 3" class="hidden"></a>
+    </div>
+
+    <!-- ✅ Project 5 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition relative group">
+      <a href="img/project5/1.jpg" data-lightbox="project5" data-title="Project 5 - Image 1">
+        <img src="img/project5/1.jpg" alt="Project 5" class="w-full h-64 object-cover group-hover:opacity-90 transition">
+      </a>
+      <div class="bg-red-600 text-white text-center font-bold py-3">Project 5</div>
+      <a href="img/project5/2.jpg" data-lightbox="project5" data-title="Project 5 - Image 2" class="hidden"></a>
+      <a href="img/project5/3.jpg" data-lightbox="project5" data-title="Project 5 - Image 3" class="hidden"></a>
+      <a href="img/project5/4.jpg" data-lightbox="project5" data-title="Project 5 - Image 4" class="hidden"></a>
+    </div>
+
+    <!-- ✅ Project 6 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition relative group">
+      <a href="img/project6/1.jpg" data-lightbox="project6" data-title="Project 6 - Image 1">
+        <img src="img/project6/1.jpg" alt="Project 6" class="w-full h-64 object-cover group-hover:opacity-90 transition">
+      </a>
+      <div class="bg-red-600 text-white text-center font-bold py-3">Project 6</div>
+      <a href="img/project6/2.jpg" data-lightbox="project6" data-title="Project 6 - Image 2" class="hidden"></a>
+      <a href="img/project6/3.jpg" data-lightbox="project6" data-title="Project 6 - Image 3" class="hidden"></a>
+      <a href="img/project6/4.jpg" data-lightbox="project6" data-title="Project 6 - Image 4" class="hidden"></a>
+    </div>
+
   </div>
 </section>
 
@@ -334,12 +370,15 @@
   </footer>
 
   <script>
+    
     const langBtn = document.getElementById("langBtn");
     let currentLang = "TH";
     langBtn.addEventListener("click", () => {
       currentLang = currentLang === "TH" ? "EN" : "TH";
       langBtn.textContent = currentLang;
-    });
+    }); 
+
+
   </script>
 
 </body>
