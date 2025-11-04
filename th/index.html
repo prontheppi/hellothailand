@@ -35,27 +35,30 @@
 
   <!-- Navbar -->
   <nav class="flex items-center justify-between bg-black px-6 py-3">
-    <a href="#" class="flex items-center">
-      <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10">
-    </a>
+    <div class="flex items-center gap-[10px] flex-grow">
+      <a href="#" class="flex items-center">
+        <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10 w-32">
+      </a>
 
-    <input type="text" placeholder="Search" class="bg-[#3b1616] text-white rounded px-3 py-2 w-64 placeholder-gray-300 outline-none">
-
-    <ul class="flex space-x-6">
-      <li><a href="index.html" class="text-white hover:text-red-500">Home</a></li>
-      <li><a href="gallery.html" class="text-white hover:text-red-500">Gallery Works</a></li>
-      <li><a href="contact.html" class="text-white hover:text-red-500">Contact us</a></li>
-    </ul>
-
-    <div class="flex items-center space-x-2">
-      <a href="#" id="langBtn" class="text-white font-bold">EN</a>
+      <input type="text" placeholder="Search"
+        class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none w-96">
     </div>
+
+      <ul class="flex space-x-10 text-xl ml-10">
+        <li><a href="index.html" class="text-white hover:text-red-500"> หน้าหลัก </a></li>
+        <li><a href="gallery.html" class="text-white hover:text-red-500"> แกลเลอรี่ผลงาน </a></li>
+        <li><a href="contact.html" class="text-white hover:text-red-500"> ติดต่อเรา </a></li>
+      </ul>
+
+      <div class="flex items-center space-x-2 text-xl ml-10">
+        <a href="#" id="langBtn" class="text-white font-bold">EN</a>
+      </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center h-screen bg-[url('windows-doors.jpg')] bg-cover bg-center text-center text-white">
-    <img src="../img/home.jpg" alt="Window 1" class="w-11/12 max-w-4xl rounded-lg shadow-lg">
-  </section>
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center h-screen bg-[url('windows-doors.jpg')] bg-cover bg-center text-center text-white">
+      <img src="../img/home.jpg" alt="Window 1"  class="w-[75%] max-w-none h-auto rounded-lg shadow-lg object-cover">
+    </section>
 
   <!-- Intro Section -->
   <section class="bg-black py-8">
@@ -262,20 +265,33 @@
 
   <!-- part 8 : About us -->
   <section class="bg-white text-gray-900 py-8 px-4">
-    <div class="max-w-6xl mx-auto">
-      
-      <p class="text-lg mb-3">
-        ที่ <strong> Alustem, </strong> เราเชื่อว่าประตูและหน้าต่างที่ดีที่สุด คือสิ่งที่ตอบโจทย์ความต้องการของลูกค้าได้อย่างเหมาะสมบูรณ์แบบ 
-        เราใส่ใจในทุกรายละเอียด ตั้งแต่การคัดสรร <strong> ผลิตภัณฑ์คุณภาพสูง </strong> ที่เหมาะสมกับแต่ละโครงการ ไปจนถึงกระบวนการผลิต
-        ที่ได้มาตราฐาน เพื่อให้มั่นใจว่าคุณจะได้รับสินค้าที่ดีที่สุด เราพร้อมให้ <strong> คำปรึกษาและคำแนะนำ </strong> ที่ดีเยี่ยม เพื่อช่วยให้คุณเลือก
-        ประตูและหน้าต่างที่ <strong> สวยงาม ใช้งาน สะดวก </strong> และ <strong> แข็งแรงทนทาน </strong> ตามที่คุณต้องการ
-      </p>
+    
+    <div class="relative mb-10 mx-auto">
+      <!-- โลโก้ตรงกลาง -->
+      <img src="../img/logo.jpg" alt="Logo" class=" h-20 mx-auto">
 
-      <p class="text-lg mb-3">
-        ด้วย <strong> ทีมงานติดตั้งที่มีประสบการณ์มากกว่า 10 ปีในพื้นที่ </strong> ทำให้เราเข้าใจถึงสภาพแวดล้อมและปัจจัยต่างๆ ที่ส่งผลต่อการติดตั้งได้อย่างดีเยี่ยม
-        เราจึงมั่นใจว่างานของเราจะมีความแม่นยำและได้มาตราฐานสูงสุด และที่สำคัญ เรามี <strong> บริการหลังการขาย </strong> ที่พร้อมดูแลคุณในทุกขั้นตอน 
-        เพื่อให้คุณมั่นใจและสบายใจในทุกการใช้งาน
-      </p>
+      <!-- ข้อความอยู่ทางซ้าย -->
+       <div class="max-w-6xl mx-auto ">
+        <h2 class="text-4xl font-bold text-gray-800 ">
+          เกี่ยวกับเรา
+        </h2>
+      </div>
+    </div>
+
+      <div class="max-w-6xl mx-auto">
+        <p class="text-lg mb-3">
+          ที่ <strong> Alustem, </strong> เราเชื่อว่าประตูและหน้าต่างที่ดีที่สุด คือสิ่งที่ตอบโจทย์ความต้องการของลูกค้าได้อย่างเหมาะสมบูรณ์แบบ 
+          เราใส่ใจในทุกรายละเอียด ตั้งแต่การคัดสรร <strong> ผลิตภัณฑ์คุณภาพสูง </strong> ที่เหมาะสมกับแต่ละโครงการ ไปจนถึงกระบวนการผลิต
+          ที่ได้มาตราฐาน เพื่อให้มั่นใจว่าคุณจะได้รับสินค้าที่ดีที่สุด เราพร้อมให้ <strong> คำปรึกษาและคำแนะนำ </strong> ที่ดีเยี่ยม เพื่อช่วยให้คุณเลือก
+          ประตูและหน้าต่างที่ <strong> สวยงาม ใช้งาน สะดวก </strong> และ <strong> แข็งแรงทนทาน </strong> ตามที่คุณต้องการ
+        </p>
+
+        <p class="text-lg mb-3">
+          ด้วย <strong> ทีมงานติดตั้งที่มีประสบการณ์มากกว่า 10 ปีในพื้นที่ </strong> ทำให้เราเข้าใจถึงสภาพแวดล้อมและปัจจัยต่างๆ ที่ส่งผลต่อการติดตั้งได้อย่างดีเยี่ยม
+          เราจึงมั่นใจว่างานของเราจะมีความแม่นยำและได้มาตราฐานสูงสุด และที่สำคัญ เรามี <strong> บริการหลังการขาย </strong> ที่พร้อมดูแลคุณในทุกขั้นตอน 
+          เพื่อให้คุณมั่นใจและสบายใจในทุกการใช้งาน
+        </p>
+      </div>
 
     </div>
   </section>
@@ -329,7 +345,7 @@
 
         <!-- Video support -->
         <a
-          data-video='{"source": [{"src":"img/project1/1.mp4","type":"video/mp4"}],"attributes":{"controls":true}}'
+          data-video='{"source": [{"src":"../img/project1/1.mp4","type":"video/mp4"}],"attributes":{"controls":true}}'
           href="../img/project1/1.mp4"
           class="hidden">
         </a>
@@ -340,17 +356,19 @@
       <div id="project2-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
 
         <!-- Thumbnail image -->
-        <a href="../img/project2/1.jpg">
+        <a href="../img/project2/1.jpg" class="thumbnail">
           <img src="../img/project2/1.jpg"
             class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
         </a>
 
         <!-- Project Title -->
-        <div class="bg-red-600 text-white text-center font-bold text-2xl py-6">โปรเจค 2</div>
+        <div class="bg-red-600 text-white text-center font-bold text-2xl py-6"> โปรเจค 2 </div>
 
         <!-- Overlay with "View All" + count -->
         <div
-          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
+          onclick="openGallery('project2-gallery')">
+
           <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
             แสดงทั้งหมด
           </span>
@@ -382,7 +400,7 @@
       <div id="project3-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
 
         <!-- Thumbnail image -->
-        <a href="../img/project3/1.jpg">
+        <a href="../img/project3/1.jpg" class="thumbnail">
           <img src="../img/project3/1.jpg"
             class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
         </a>
@@ -392,7 +410,8 @@
 
         <!-- Overlay with "View All" + count -->
         <div
-          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
+          onclick="openGallery('project3-gallery')">
           <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
             แสดงทั้งหมด
           </span>
@@ -420,7 +439,7 @@
       <div id="project4-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
 
         <!-- Thumbnail image -->
-        <a href="../img/project4/1.jpg">
+        <a href="../img/project4/1.jpg" class="thumbnail">
           <img src="../img/project4/1.jpg"
             class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
         </a>
@@ -430,7 +449,9 @@
 
         <!-- Overlay with "View All" + count -->
         <div
-          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
+          onclick="openGallery('project4-gallery')">
+
           <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
             แสดงทั้งหมด
           </span>
@@ -451,7 +472,7 @@
       <div id="project5-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
 
         <!-- Thumbnail image -->
-        <a href="../img/project5/1.jpg">
+        <a href="../img/project5/1.jpg" class="thumbnail">
           <img src="../img/project5/1.jpg"
             class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
         </a>
@@ -461,7 +482,8 @@
 
         <!-- Overlay with "View All" + count -->
         <div
-          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
+          onclick="openGallery('project5-gallery')">
           <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
             แสดงทั้งหมด
           </span>
@@ -499,7 +521,7 @@
       <div id="project6-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
 
         <!-- Thumbnail image -->
-        <a href="../img/project6/1.jpg">
+        <a href="../img/project6/1.jpg" class="thumbnail">
           <img src="../img/project6/1.jpg"
             class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
         </a>
@@ -509,7 +531,8 @@
 
         <!--  Overlay with "View All" + count -->
         <div
-          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
+          onclick="openGallery('project6-gallery')">
           <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
             แสดงทั้งหมด
           </span>
@@ -619,14 +642,26 @@ function openGallery(id) {
       // ใช้รูป preview ชั่วคราว เช่น thumb.jpg ในโฟลเดอร์เดียวกัน
       const thumb = href.replace(".mp4", ".jpg");
       return {
-        src: thumb,           // ✅ แสดงเป็นภาพนิ่ง
-        thumb: thumb,
-        subHtml: "<p>Video preview only</p>",
+        video: {
+          source: [
+            {
+              scr: href,
+              type: 'video/mp4'
+            }
+          ],
+          attributes: {
+              controls: true,
+              preload: 'metadata'
+          }
+        },
+
+        poster: thumb,           
+        thumb: thumb
       };
     }
 
     // ✅ ภาพนิ่งปกติ
-    return { src: href };
+    return { src: href, thumb: href };
   }).filter(Boolean);
 
   console.log("🎞️ ตรวจไฟล์ใน Gallery:", items);

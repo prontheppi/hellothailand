@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8">
   <title>Awning Windows | Alustem</title>
@@ -8,39 +8,52 @@
   <style>
     body { font-family: 'Sarabun', sans-serif; }
   </style>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  
 </head>
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-black text-white px-6 py-3">
-    <a href="index.html" class="flex items-center">
-      <img src="img/logo.jpg" alt="Alustem Logo" class="h-10">
-    </a>
-    <input type="text" placeholder="Search"
-           class="bg-[#3b1616] text-white px-3 py-2 rounded outline-none placeholder-gray-300 w-64">
-    <ul class="flex space-x-6 text-sm font-medium">
-      <li><a href="index.html" class="hover:text-red-400">Home</a></li>
-      <li><a href="gallery.html" class="hover:text-red-400">Gallery Works</a></li>
-      <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
-    </ul>
+  <nav class="flex items-center justify-between bg-black px-6 py-3">
+    <div class="flex items-center gap-[10px] flex-grow">
+      <a href="#" class="flex items-center">
+        <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10 w-32">
+      </a>
+
+      <input type="text" placeholder="Search"
+        class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none w-96">
+    </div>
+
+      <ul class="flex space-x-10 text-xl ml-10">
+        <li><a href="index.html" class="text-white hover:text-red-500"> หน้าหลัก </a></li>
+        <li><a href="gallery.html" class="text-white hover:text-red-500"> แกลเลอรี่ผลงาน </a></li>
+        <li><a href="contact.html" class="text-white hover:text-red-500"> ติดต่อเรา </a></li>
+      </ul>
+
+      <div class="flex items-center space-x-2 text-xl ml-10">
+        <a href="#" id="langBtn" class="text-white font-bold">EN</a>
+      </div>
   </nav>
 
   <!-- Banner -->
   <section class="bg-[#315c4d] text-white px-8 py-4">
-    <h2 class="text-3xl font-bold">Awning Windows</h2>
+    <h2 class="text-3xl font-bold"> หน้าต่างบานกระทุ้ง </h2>
   </section>
 
   <!-- Hero Section -->
-  <section class="relative bg-[url('img/awning/awning_cover.jpg')] bg-cover bg-center h-[300px]">
+  <section class="relative bg-[url('../img/awning/awning_cover.jpg')] bg-cover bg-center h-[300px]">
     <div class="absolute bottom-5 left-5 bg-black/60 text-white p-5 rounded max-w-lg">
       <p>
-        <strong>Awning windows</strong> are designed to open outwards from the bottom.
-        This unique design allows continuous airflow even on <strong>rainy days</strong>,
-        providing superior ventilation while maintaining privacy.
+        หน้าต่างบานกระทุ้งเป็นหน้าต่างที่เปิดออกด้านบนจากวงกบด้านล่าง การออกแบบที่เป็นเอกลักษณ์นี้ช่วยให้คุณสามารถเปิดหน้าต่างรับลมได้อย่างต่อเนื่อง แม้ในวันที่ฝนตก และยังมอบ
+        ความเป็นส่วนตัวที่เหนือกว่าหน้าต่างทั่วไป
       </p>
       <a href="contact.html"
          class="inline-block mt-3 bg-[#a52a2a] hover:bg-[#8b1e1e] text-white px-4 py-2 rounded font-semibold transition">
-         Please contact us
+         ติดต่อเรา
       </a>
     </div>
   </section>
@@ -48,16 +61,16 @@
   <!-- Features -->
   <section class="bg-white px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Key Features & Benefits</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อดีและคุณสมบัติเด่น </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Rain Protection:</strong> The outward-opening design acts like an awning, allowing airflow even during rain.</li>
-        <li><strong>Continuous Airflow:</strong> Provides passive ventilation throughout the day.</li>
-        <li><strong>Privacy and Security:</strong> Ideal for bathrooms and basements, ensuring light and privacy.</li>
-        <li><strong>Energy Efficiency:</strong> Airtight seals improve insulation and reduce energy loss.</li>
+        <li><strong> ป้องกันฝนสาด:</strong> ด้วยการเปิดออกในลักษณะที่คล้ายกับหลังคา หน้าต่างบานกระทุ้งจึงช่วยป้องกันน้ำฝนไม่ให้กระเด็นเข้ามาในตัวบ้านได้ </li>
+        <li><strong> ระบายอากาศได้ตลอดเวลา:</strong> คุณสามารถเปิดหน้าต่างทิ้งไว้เพื่อให้อากาศถ่ายเทได้ทั้งวัน</li>
+        <li><strong> ความเป็นส่วนตัวและความปลอดภัย:</strong> เหมาะสำหรับการติดตั้งในตำแหน่งที่สูง เช่น ห้องน้ำ หรือ ห้องใต้ดิน ช่วยให้ได้รับแสงและอากาศโดยไม่ต้องกังวลเรื่องความเป็นส่วนตัว </li>
+        <li><strong> ประหยัดพลังงาน:</strong> เมื่อปิดสนิท หน้าต่างจะแนบสนิทกับขอบวงกบ ช่วยป้องกันอากาศรั่วซึมทำให้การทำงานของเครือ่งปรับอากาศมีประสิทธิภาพมากขึ้น </li>
       </ul>
 
       <div class="text-center mt-10">
-        <img src="img/awning/awning101.jpg" alt="Awning Window Feature"
+        <img src="../img/awning/awning101.jpg" alt="Awning Window Feature"
              class="rounded-lg shadow-md inline-block max-w-full h-auto">
       </div>
     </div>
@@ -66,13 +79,13 @@
   <!-- Considerations -->
   <section class="bg-gray-50 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Considerations</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อควรพิจารณา </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Exterior Cleaning:</strong> The sash doesn’t flip inward, making exterior cleaning harder.</li>
-        <li><strong>Limited View:</strong> The opened sash can obstruct views and isn’t suitable for exits.</li>
+        <li><strong> การทำความสะอาด:</strong> การทำความสะอาดกระจกด้านนอกอาจต้องใช้ความระมัดระวังมากขึ้น เนื่องจากบานหน้าต่างไม่สามารถหมุนกลับเข้ามาได้ </li>
+        <li><strong> การจำกัดการมองเห็น:</strong> การเปิดหน้าต่างอาจบดบังทัศนียภาพเล็กน้อย และไม่สามารถใช้เป็นทางเข้า-ออกได้ </li>
       </ul>
       <div class="flex justify-center mt-10">
-        <img src="img/awning/awning102.jpg" alt="Awning View"
+        <img src="../img/awning/awning102.jpg" alt="Awning View"
              class="rounded-lg shadow-md max-w-[600px] w-full">
       </div>
     </div>
@@ -81,14 +94,14 @@
   <!-- Usage -->
   <section class="bg-gray-100 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Usage & Application Guide</h2>
+      <h2 class="text-2xl font-bold mb-4"> คำแนะนำในการเลือกใช้งาน </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Bathrooms & Kitchens:</strong> Best for areas requiring airflow and privacy.</li>
-        <li><strong>Combined with Other Windows:</strong> Often used above fixed windows for ventilation.</li>
-        <li><strong>Basements:</strong> Tight seals make them secure and weatherproof.</li>
+        <li><strong> ห้องน้ำและห้องครัว:</strong> เป็นตัวเลือกที่ยอดเยี่ยมสำหรับห้องที่ต้องการการระบายอากาศแต่ไม่ต้องการสูญเสียความเป็นส่วนตัว </li>
+        <li><strong> ติดตั้งคู่กับหน้าต่างแบบอื่น:</strong> สามารถติดตั้งไว้ด้านบนหรือด้านล่างของหน้าต่างบานใหญ่ (Fixed Window) เพื่อเพิ่มการระบายอากาศโดยไม่บดบังทัศนียภาพ </li>
+        <li><strong> หน้าต่างชั้นใต้ดินหรือห้องเก็บของ:</strong> เหมาะสำหรับพื้นที่ที่ต้องการแสงและลมแต่ต้องการความปลอดภัยสูงสุด </li>
       </ul>
       <div class="flex justify-center mt-10">
-        <img src="img/awning/awning103.jpg" alt="Awning Applications"
+        <img src="../img/awning/awning103.jpg" alt="Awning Applications"
              class="rounded-lg shadow-md max-w-[600px] w-full">
       </div>
     </div>

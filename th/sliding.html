@@ -8,41 +8,52 @@
   <style>
     body { font-family: 'Sarabun', sans-serif; }
   </style>
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
 </head>
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-black text-white px-6 py-3">
-    <a href="index.html" class="flex items-center">
-      <img src="img/logo.jpg" alt="Alustem Logo" class="h-10">
-    </a>
+  <nav class="flex items-center justify-between bg-black px-6 py-3">
+    <div class="flex items-center gap-[10px] flex-grow">
+      <a href="#" class="flex items-center">
+        <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10 w-32">
+      </a>
 
-    <input type="text" placeholder="Search"
-           class="bg-[#3b1616] text-white px-3 py-2 rounded outline-none placeholder-gray-300 w-64">
+      <input type="text" placeholder="Search"
+        class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none w-96">
+    </div>
 
-    <ul class="flex space-x-6 text-sm font-medium">
-      <li><a href="index.html" class="hover:text-red-400">Home</a></li>
-      <li><a href="gallery.html" class="hover:text-red-400">Gallery Works</a></li>
-      <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
-    </ul>
+      <ul class="flex space-x-10 text-xl ml-10">
+        <li><a href="index.html" class="text-white hover:text-red-500"> หน้าหลัก </a></li>
+        <li><a href="gallery.html" class="text-white hover:text-red-500"> แกลเลอรี่ผลงาน </a></li>
+        <li><a href="contact.html" class="text-white hover:text-red-500"> ติดต่อเรา </a></li>
+      </ul>
+
+      <div class="flex items-center space-x-2 text-xl ml-10">
+        <a href="#" id="langBtn" class="text-white font-bold">EN</a>
+      </div>
   </nav>
 
   <!-- Banner -->
   <section class="bg-[#315c4d] text-white px-8 py-4">
-    <h2 class="text-3xl font-bold">Sliding Doors & Windows</h2>
+    <h2 class="text-3xl font-bold"> ประตูและหน้าต่างบานเลื่อน </h2>
   </section>
 
   <!-- Hero Section -->
-  <section class="relative bg-[url('img/sliding/slide_cover.jpg')] bg-cover bg-center h-[300px]">
+  <section class="relative bg-[url('../img/sliding/slide_cover.jpg')] bg-cover bg-center h-[300px]">
     <div class="absolute bottom-5 left-5 bg-black/60 text-white p-5 rounded max-w-lg">
       <p>
-        <strong>Sliding Doors & Windows</strong> are the perfect solution for modern homes that
-        need to save space and create a seamless connection between indoor and outdoor living areas.
-        With their sleek and simple design, they’re ideal for living rooms, balconies, and patios.
+        <strong> ประตูและหน้าต่างบานเลื่อน </strong> คือคำตอบสำหรับบ้านที่ต้องการประหยัดพิื้นที่และเชื่อมต่อพื้นที่ภายในกับภายนอกได้อย่างไร้รอยต่อ
+        ด้วยการออกแบบที่เรียบง่ายแต่ทันสมัย <strong> ประตูบานเลื่อน </strong> ของเราจึงเหมาะอย่างยิ่งสำหรับห้องนั่งเล่น, ระเบียง และสวน
       </p>
       <a href="contact.html"
          class="inline-block mt-3 bg-[#a52a2a] hover:bg-[#8b1e1e] text-white px-4 py-2 rounded font-semibold transition">
-         Please contact us
+         ติดต่อเรา
       </a>
     </div>
   </section>
@@ -50,16 +61,16 @@
   <!-- Features -->
   <section class="bg-white px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Key Features & Benefits</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อดีและคุณสมบัติเด่น </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Space-Saving:</strong> The sliding track system eliminates the need for swing space, ideal for tight rooms.</li>
-        <li><strong>Easy to Operate:</strong> High-quality rollers ensure smooth and effortless operation.</li>
-        <li><strong>Expansive Views:</strong> Large glass panels allow abundant light and a panoramic view.</li>
-        <li><strong>Sleek & Modern:</strong> Clean lines create a minimalist aesthetic that fits any modern design.</li>
+        <li><strong> ประหยัดพื้นที่ (Space-Saving): </strong> ประตูและหน้าต่างจะเลื่อนไปตามราง ทำให้ไม่กินพื้นที่เหมือนประตูบานเปิด จึงเหมาะสำหรับพื้นที่ที่จำกัด </li>
+        <li><strong> ใช้งานง่าย (Easy to Use): </strong> ด้วยระบบลูกล้อคุณภาพสูง ทำให้สามารถเลื่อนเปิด-ปิดได้อย่างราบรื่น </li>
+        <li><strong> มอบทัศนียภาพกว้าง (Expansive Views): </strong> บานกระจกขนาดใหญ่ช่วยให้บ้านของคุณได้รับแสงธรรมชาติเต็มที่และให้ทัศนียภาพที่กว้างขวาง </li>
+        <li><strong> ดีไซน์ทันสมัย (Modern Design): ประตูบานเลื่อน </strong> ช่วยให้บ้านของคุณดูเรียบหรูและทันสมัย </li>
       </ul>
 
       <div class="text-center mt-10">
-        <img src="img/sliding/slide101.jpg" alt="Sliding Door Feature"
+        <img src="../img/sliding/slide101.jpg" alt="Sliding Door Feature"
              class="rounded-lg shadow-md inline-block max-w-full h-auto">
       </div>
     </div>
@@ -68,14 +79,14 @@
   <!-- Considerations -->
   <section class="bg-gray-50 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Considerations</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อควรพิจารณา </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Limited Ventilation:</strong> Only half the total area can open, reducing airflow.</li>
-        <li><strong>Track Maintenance:</strong> The bottom track needs regular cleaning for smooth movement.</li>
+        <li><strong> การระบายอากาศที่จำกัด: </strong> เมื่อเปิดใช้งาน คุณสามารถเปิดได้เพียงครึ่งเดียว ซึ่งอาจทำให้ได้รับลมไม่เท่ากับบานเปิด </li>
+        <li><strong> การทำความสะอาดราง:</strong> รางด้านล่างอาจมีการสะสมของฝุ่นและเศษผง ซึ่งต้องทำความสะอาดอย่างสม่ำเสมอเพื่อการใช้งานที่ราบรื่น </li>
       </ul>
 
       <div class="flex justify-center mt-10">
-        <img src="img/sliding/slide102.jpg" alt="Sliding Door Considerations"
+        <img src="../img/sliding/slide102.jpg" alt="Sliding Door Considerations"
              class="rounded-lg shadow-md max-w-[600px] w-full">
       </div>
     </div>
@@ -84,15 +95,15 @@
   <!-- Usage -->
   <section class="bg-gray-100 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Usage & Application Guide</h2>
+      <h2 class="text-2xl font-bold mb-4"> คำแนะนำในการเลือกใช้งาน </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Patio Doors:</strong> Create a seamless flow between living spaces and the outdoors.</li>
-        <li><strong>Room Dividers:</strong> Great for separating spaces while keeping light and openness.</li>
-        <li><strong>Large Windows:</strong> Perfect for maximizing natural light and wide outdoor views.</li>
+        <li><strong> ประตูทางออกระเบียง: </strong> เป็นตัวเลือกที่ได้รับความนิยมสูงสุดสำหรับทางออกไปสู่ระเบียงหรือชานบ้าน </li>
+        <li><strong> กั้นพื้นที่: </strong> ใช้เป็นฉากกั้นระหว่างห้อง เช่น ห้องนั่งเล่นกับห้องอาหาร เพื่อแบ่งพื้นที่อย่างมีสไตล์ </li>
+        <li><strong> หน้าต่างบานใหญ่: </strong> เหมาะสำหรับห้องที่ต้องการรับแสงสว่างหรือมีทิวทัศน์สวยงาม เช่น ห้องนอนหรือห้องทำงาน </li>
       </ul>
 
       <div class="flex justify-center mt-10">
-        <img src="img/sliding/slide103.jpg" alt="Sliding Door Usage"
+        <img src="../img/sliding/slide103.jpg" alt="Sliding Door Usage"
              class="rounded-lg shadow-md max-w-[600px] w-full">
       </div>
     </div>

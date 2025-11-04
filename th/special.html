@@ -12,46 +12,54 @@
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-black text-white px-6 py-3">
-    <a href="index.html" class="flex items-center">
-      <img src="img/logo.jpg" alt="Alustem Logo" class="h-10">
-    </a>
+  <nav class="flex items-center justify-between bg-black px-6 py-3">
+    <div class="flex items-center gap-[10px] flex-grow">
+      <a href="#" class="flex items-center">
+        <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10 w-32">
+      </a>
 
-    <input type="text" placeholder="Search"
-           class="bg-[#3b1616] text-white px-3 py-2 rounded outline-none placeholder-gray-300 w-64">
+      <input type="text" placeholder="Search"
+        class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none w-96">
+    </div>
 
-    <ul class="flex space-x-6 text-sm font-medium">
-      <li><a href="index.html" class="hover:text-red-400">Home</a></li>
-      <li><a href="gallery.html" class="hover:text-red-400">Gallery Works</a></li>
-      <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
-    </ul>
+      <ul class="flex space-x-10 text-xl ml-10">
+        <li><a href="index.html" class="text-white hover:text-red-500"> หน้าหลัก </a></li>
+        <li><a href="gallery.html" class="text-white hover:text-red-500"> แกลเลอรี่ผลงาน </a></li>
+        <li><a href="contact.html" class="text-white hover:text-red-500"> ติดต่อเรา </a></li>
+      </ul>
+
+      <div class="flex items-center space-x-2 text-xl ml-10">
+        <a href="#" id="langBtn" class="text-white font-bold">EN</a>
+      </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative h-[90vh] bg-[url('img/spacial/spacial_cover.jpg')] bg-cover bg-center text-white flex flex-col items-center justify-center text-center">
-    <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg mb-4">Special Doors and Windows</h1>
+  <section class="relative h-[90vh] bg-[url('../img/spacial/spacial_cover.jpg')] bg-cover bg-center text-white flex flex-col items-center justify-center text-center">
+    <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg mb-4"> ประตูและหน้าต่างบานพิเศษ </h1>
     <p class="max-w-3xl text-lg md:text-xl drop-shadow-md px-6">
-      <strong>Casement windows and swing doors</strong> are an innovative solution that blends multiple
-      functionalities into a single frame to meet your unique design needs.
+      <strong>Casement windows and swing doors</strong> คือนวัตกรรมที่รวมฟังก์ชันการใช้งานที่หลากหลายไว้ในบานเดียว เพื่อตอบโจทย์การออกแบบที่ไม่เหมือนใครของคุณ 
+      ไม่ว่าจะเป็นการรวมหน้าต่างบานเปิดเข้ากับบานติดตาย หรือการเพิ่มช่องแสงไว้ด้านบนของประตู ทำให้คุณสามารถปรับแต่งได้อย่างอิสระเพื่อความสมบูรณ์แบบสูงสุด
     </p>
     <a href="contact.html"
        class="mt-6 bg-[#a52a2a] hover:bg-[#8b1e1e] text-white font-semibold px-6 py-3 rounded-lg transition">
-       Please contact us
+       ติดต่อเรา
     </a>
   </section>
 
   <!-- Features -->
   <section class="px-8 py-4 bg-white">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Key Features & Benefits</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อดีและคุณสมบัติเด่น </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Design Versatility:</strong> Mix and match styles for unique combinations such as <strong>Tilt & Turn</strong> or <strong>Corner Curve</strong> glass.</li>
-        <li><strong>Optimized Light and Airflow:</strong> Combine operable sashes with fixed panels to maximize light and ventilation.</li>
-        <li><strong>High Performance:</strong> Built for durability, ensuring top functionality and elegant appearance.</li>
+        <li><strong> ยืดหยุ่นในการออกแบบ: </strong> ช่วยให้คุณสามารถผสมผสานสไตล์และฟังก์ชันได้อย่างอิสระ สร้างสรรค์หน้าต่างและประตูที่มีเอกลักษณ์เฉพาะตัว เช่น 
+        เปิดและกระทุ้งในบานเดียวกัน บานโค้ง กระจกโค้ว </li>
+        <li><strong> เพิ่มแสงสว่างและการระบายอากาศ: </strong> การผสมผสานบานหน้าต่างแบบเปิดได้เเข้ากับบานติดตายจะช่วยให้บ้านได้รับแสงธรรมชาติอย่างเต็มที่ พร้อมการระบาย
+        อากาศที่ยอดเยี่ยมเมื่อคุณต้องการ </li>
+        <li><strong> ประสิทธิภาพสูงสุด: </strong> ด้วยโครงสร้างที่แข็งแรงและวัสดุคุณภาพ ทำให้คุณได้รับประโยชน์จากทุกฟังก์ชันการใช้งานอย่างเต็มที่ </li>
       </ul>
 
       <div class="text-center mt-10">
-        <img src="img/special/special101.jpg" alt="Special Feature"
+        <img src="../img/special/special101.jpg" alt="Special Feature"
              class="rounded-lg shadow-md inline-block max-w-full h-auto">
       </div>
     </div>
@@ -60,14 +68,14 @@
   <!-- Considerations -->
   <section class="bg-gray-50 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Considerations</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อควรพิจารณา </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Higher Cost:</strong> Custom designs increase both manufacturing and installation expenses.</li>
-        <li><strong>Complex Installation:</strong> Requires expert craftsmanship for alignment and sealing.</li>
+        <li><strong> ต้นทุนที่สูงกว่า: </strong> ด้วยความที่เป็นงานสั่งทำพิเศษ ทำให้มีค่าใช้จ่ายในการผลิตและการติดตั้งสูงกว่าบานสำเร็จรูป </li>
+        <li><strong> การติดตั้งที่ซับซ้อน: </strong> การติดตั้งต้องอาศัยผู้เชี่ยวชาญที่มีประสบการณ์สูง เพื่อให้ทุกส่วนประกอบทำงานได้อย่างสมบูรณ์แบบ </li>
       </ul>
 
       <div class="flex justify-center mt-10">
-        <img src="img/special/special102.jpg" alt="Special Considerations"
+        <img src="../img/special/special102.jpg" alt="Special Considerations"
              class="rounded-lg shadow-md max-w-[600px] w-full">
       </div>
     </div>
@@ -76,11 +84,11 @@
   <!-- Usage -->
   <section class="bg-gray-100 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Usage & Application Guide</h2>
+      <h2 class="text-2xl font-bold mb-4"> คำแนะนำในการเลือกใช้งาน </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Living Rooms:</strong> Create a grand, open look with maximum natural light.</li>
-        <li><strong>Corner Installations:</strong> Perfectly fit for modern architecture with seamless corner joints.</li>
-        <li><strong>Large Openings:</strong> Ideal for wide wall openings offering panoramic views and ventilation.</li>
+        <li><strong> ห้องรับแขกและห้องนั่งเล่น: </strong> เหมาะสำหรับพื้นที่ที่ต้องการความโอ่อ่า และต้องการรับแสงจากภายนอกอย่างเต็มที่ </li>
+        <li><strong> มุมห้อง: </strong> สามารถออกแบบให้เข้ามุมได้อย่างพอดี เพื่อสร้างจุดเด่นและใช้พื้นที่ได้อย่างคุ้มค่า </li>
+        <li><strong> ช่องเปิดขนาดใหญ่: </strong> เป็นทางเลือกที่ดีสำหรับช่องเปิดขนาดใหญ่ที่ต้องการทั้งการรับแสงและการระบายอากาศไปพร้อมกัน </li>
       </ul>
 
       <div class="flex justify-center mt-10">

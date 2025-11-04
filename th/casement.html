@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8">
   <title>Casement Windows & Swing Doors | Alustem</title>
@@ -8,41 +8,52 @@
   <style>
     body { font-family: 'Sarabun', sans-serif; }
   </style>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  
 </head>
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-black text-white px-6 py-3">
-    <a href="index.html" class="flex items-center">
-      <img src="img/logo.jpg" alt="Alustem Logo" class="h-10">
-    </a>
+  <nav class="flex items-center justify-between bg-black px-6 py-3">
+    <div class="flex items-center gap-[10px] flex-grow">
+      <a href="#" class="flex items-center">
+        <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10 w-32">
+      </a>
 
-    <input type="text" placeholder="Search"
-           class="bg-[#3b1616] text-white px-3 py-2 rounded outline-none placeholder-gray-300 w-64">
+      <input type="text" placeholder="Search"
+        class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none w-96">
+    </div>
 
-    <ul class="flex space-x-6 text-sm font-medium">
-      <li><a href="index.html" class="hover:text-red-400">Home</a></li>
-      <li><a href="gallery.html" class="hover:text-red-400">Gallery Works</a></li>
-      <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
-    </ul>
+      <ul class="flex space-x-10 text-xl ml-10">
+        <li><a href="index.html" class="text-white hover:text-red-500"> หน้าหลัก </a></li>
+        <li><a href="gallery.html" class="text-white hover:text-red-500"> แกลเลอรี่ผลงาน </a></li>
+        <li><a href="contact.html" class="text-white hover:text-red-500"> ติดต่อเรา </a></li>
+      </ul>
+
+      <div class="flex items-center space-x-2 text-xl ml-10">
+        <a href="#" id="langBtn" class="text-white font-bold">EN</a>
+      </div>
   </nav>
 
   <!-- Banner -->
   <section class="bg-[#315c4d] text-white px-8 py-4">
-    <h2 class="text-3xl font-bold">Casement Windows & Swing Doors</h2>
+    <h2 class="text-3xl font-bold"> ประตูและหน้าต่างบานเปิด </h2>
   </section>
 
   <!-- Hero Section -->
-  <section class="relative bg-[url('img/casement/casement101.jpg')] bg-cover bg-center h-[300px]">
+  <section class="relative bg-[url('../img/casement/casement101.jpg')] bg-cover bg-center h-[300px]">
     <div class="absolute bottom-5 left-5 bg-black/60 text-white p-5 rounded max-w-lg">
       <p>
-        <strong>Casement windows and swing doors</strong> are timeless designs that remain incredibly
-        popular. Their simple, durable mechanism allows your home to benefit from abundant natural
-        ventilation and a bright, open atmosphere.
+        หน้าต่างและประตูบานเปิด คือ ดีไซน์คลาสสิกที่ยังคงได้รับความนิยมอย่างสูง ด้วยกลไกการเปิด-ปิดที่เรียบง่ายและทนทาน ช่วยให้บ้านของคุณได้รับอากาศบริสุทธิ์จากภายนอก
+        ได้อย่างเต็มที่และสร้างความรู้สึกที่โล่งโปร่งสบาย
       </p>
       <a href="contact.html"
          class="inline-block mt-3 bg-[#a52a2a] hover:bg-[#8b1e1e] text-white px-4 py-2 rounded font-semibold transition">
-         Please contact us
+         ติดต่อเรา
       </a>
     </div>
   </section>
@@ -50,12 +61,12 @@
   <!-- Features -->
   <section class="bg-white px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Key Features & Benefits</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อดีและคุณสมบัติเด่น </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Superior Ventilation:</strong> Opens up to 90°, allowing excellent airflow and cross-ventilation.</li>
-        <li><strong>Enhanced Security:</strong> Multi-point locking system secures the sash tightly to the frame.</li>
-        <li><strong>Energy Efficiency:</strong> Tight seal provides insulation, reducing energy bills.</li>
-        <li><strong>Easy Maintenance:</strong> Full-opening design allows safe cleaning from inside.</li>
+        <li><strong> ระบายอากาศได้ยอดเยี่ยม: </strong> กลไกการเปิดที่กว้างถึง 90 องศา ช่วยให้คุณรับลมและถ่ายเทอากาศภายในบ้านได้อย่างมีประสิทธิภาพ </li>
+        <li><strong> ความปลอดภัยสูง: </strong> เมื่อปิดสนิท หน้าต่างและประตูจะมีกลไกที่ล๊อกตัวบานเข้ากับวงกบอย่างแน่นหนา ทำให้มีระบบรักษาความปลอดภัยที่ดีเยี่ยม </li>
+        <li><strong> ประหยัดพลังงาน: </strong> ด้วยการซีลที่แน่นหนา ทำให้สามารถป้องกันความร้อนจากภายนอกและกักเก็บความเย็นจากเครื่องปรับอากาศได้ดี </li>
+        <li><strong> ดูแลรักษาง่าย:</strong> รูปแบบการเปิดที่สามารถทำความสะอาดได้ง่ายจากภายใน ช่วยให้การบำรุงรักษาเป็นเรื่องที่ไม่ยุ่งยาก </li>
       </ul>
 
       <div class="text-center mt-10">
@@ -68,10 +79,10 @@
   <!-- Considerations -->
   <section class="bg-gray-50 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Considerations</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อควรพิจารณา </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Space Requirement:</strong> Sash swings outward and requires clearance space.</li>
-        <li><strong>Size Limitations:</strong> Casement sashes are smaller, limiting glass area.</li>
+        <li><strong> การใช้พื้นที่: </strong> เนื่องจากการเปิด-ปิดต้องใช้พื้นที่ด้านนอก จึงไม่เหมาะสำหรับบริเวณที่มีทางเดินแคบหรือพื้นที่จำกัด </li>
+        <li><strong> ขนาดที่จำกัด: </strong> หน้าต่างบานเปิดส่วนใหญ่มีขนาดบานที่จำกัดเมื่อเทียบกับหน้าต่างประเภทอื่น เพื่อความแข็งแรงของตัวบาน </li>
       </ul>
 
       <div class="flex justify-center mt-10">
@@ -84,10 +95,10 @@
   <!-- Usage -->
   <section class="bg-gray-100 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Usage & Application Guide</h2>
+      <h2 class="text-2xl font-bold mb-4"> คำแนะนำในการเลือกใช้งาน </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Casement Windows:</strong> Ideal for <strong>kitchens and bathrooms</strong> requiring airflow.</li>
-        <li><strong>Swing Doors:</strong> Perfect for balconies, gardens, or main entrances — secure and elegant.</li>
+        <li><strong> หน้าต่างบานเปิด:</strong> เหมาะสำหรับห้องครัวและห้องน้ำที่ต้องการการระบายอากาศที่ดี หรือห้องนั่งเล่นที่ต้องการรับลมและแสงจากภายนอกอย่างเต็มที่ </li>
+        <li><strong> ประตูบานเปิด:</strong> ใช้ได้ดีสำหรับประตูทางเข้าหลัก, ประตูระเบียง, หรือประตูที่เชื่อมต่อกับสวนช่วยสร้างทางเข้า-ออกที่ดูหรูหราและมั่นคง </li>
       </ul>
 
       <div class="flex justify-center mt-10">

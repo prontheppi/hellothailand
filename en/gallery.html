@@ -8,23 +8,35 @@
   <style>
     body { font-family: 'Sarabun', sans-serif; }
   </style>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  
 </head>
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-black text-white px-6 py-3">
-    <a href="index.html" class="flex items-center">
-      <img src="img/logo.jpg" alt="Alustem Logo" class="h-10">
+  <nav class="flex items-center justify-between bg-black px-6 py-3">
+  <div class="flex items-center gap-[10px] flex-grow">
+    <a href="#" class="flex items-center">
+      <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10 w-32">
     </a>
 
     <input type="text" placeholder="Search"
-           class="bg-[#3b1616] text-white px-3 py-2 rounded outline-none placeholder-gray-300 w-64">
+      class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none w-96">
+  </div>
 
-    <ul class="flex space-x-6 text-sm font-medium">
-      <li><a href="index.html" class="hover:text-red-400">Home</a></li>
-      <li><a href="gallery.html" class="hover:text-red-400">Gallery Works</a></li>
-      <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
+    <ul class="flex space-x-10 text-xl ml-10">
+      <li><a href="index.html" class="text-white hover:text-red-500">Home</a></li>
+      <li><a href="gallery.html" class="text-white hover:text-red-500">Gallery Works</a></li>
+      <li><a href="contact.html" class="text-white hover:text-red-500">Contact us</a></li>
     </ul>
+
+    <div class="flex items-center space-x-2 text-xl ml-10">
+      <a href="#" id="langBtn" class="text-white font-bold">EN</a>
+    </div>
   </nav>
 
   <!-- Gallery Header -->

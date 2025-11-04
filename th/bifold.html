@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8">
   <title>Casement Windows & Swing Doors | Alustem</title>
@@ -8,41 +8,52 @@
   <style>
     body { font-family: 'Sarabun', sans-serif; }
   </style>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
 </head>
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-black text-white px-6 py-3">
-    <a href="index.html" class="flex items-center">
-      <img src="img/logo.jpg" alt="Alustem Logo" class="h-10">
-    </a>
+  <nav class="flex items-center justify-between bg-black px-6 py-3">
+    <div class="flex items-center gap-[10px] flex-grow">
+      <a href="#" class="flex items-center">
+        <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10 w-32">
+      </a>
 
-    <input type="text" placeholder="Search"
-           class="bg-[#3b1616] text-white px-3 py-2 rounded outline-none placeholder-gray-300 w-64">
+      <input type="text" placeholder="Search"
+        class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none w-96">
+    </div>
 
-    <ul class="flex space-x-6 text-sm font-medium">
-      <li><a href="index.html" class="hover:text-red-400">Home</a></li>
-      <li><a href="gallery.html" class="hover:text-red-400">Gallery Works</a></li>
-      <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
-    </ul>
+      <ul class="flex space-x-10 text-xl ml-10">
+        <li><a href="index.html" class="text-white hover:text-red-500"> หน้าหลัก </a></li>
+        <li><a href="gallery.html" class="text-white hover:text-red-500"> แกลเลอรี่ผลงาน </a></li>
+        <li><a href="contact.html" class="text-white hover:text-red-500"> ติดต่อเรา </a></li>
+      </ul>
+
+      <div class="flex items-center space-x-2 text-xl ml-10">
+        <a href="#" id="langBtn" class="text-white font-bold">EN</a>
+      </div>
   </nav>
 
   <!-- Banner -->
   <section class="bg-[#315c4d] text-white px-8 py-4">
-    <h2 class="text-3xl font-bold"> Folding/Bi-fold Doors & Windows</h2>
+    <h2 class="text-3xl font-bold"> ประตูและหน้าต่างบานเฟี้ยม </h2>
   </section>
 
   <!-- Hero Section -->
-  <section class="relative bg-[url('img/bifold/bifold_cover.jpg')] bg-cover bg-center h-[300px]">
+  <section class="relative bg-[url('../img/bifold/bifold_cover.jpg')] bg-cover bg-center h-[300px]">
     <div class="absolute bottom-5 left-5 bg-black/60 text-white p-5 rounded max-w-lg">
       <p>
-        <strong> Folding or bi-fold doors and windows </strong> are the ultimate design for creating a seamless connection
-        between your indoor and outdoor spaces. With their simple and modern folding mechanism, they allow you to
-        open up an entire wall, creating a spacious and luxurious feel.
+        <strong> ประตูและหน้าต่างบานเฟี้ยม </strong> คือที่สุดแห่งดีไซน์ที่ช่วยเชื่อมต่อพิ้นที่ภายในและภายนอกได้อย่างไร้ขีดจำกัด ดัวยกลไกการพับเก็บที่เรียบง่ายและดูทันสมัย 
+        ทำให้สามารถเปิดพื้นที่ใช้สอยได้อย่างเต็มที่ สร้างความรู้สึกที่โล่งกว้างและหรูหราเหนือระดับ
       </p>
       <a href="contact.html"
          class="inline-block mt-3 bg-[#a52a2a] hover:bg-[#8b1e1e] text-white px-4 py-2 rounded font-semibold transition">
-         Please contact us
+         ติดต่อเรา
       </a>
     </div>
   </section>
@@ -50,16 +61,16 @@
   <!-- Features -->
   <section class="bg-white px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Key Features & Benefits</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อดีและคุณสมบัติเด่น </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Full Opening:</strong> The folding mechanism allows the entire system to be stacked neatly to one side, providing a complete opening and an unobstructed passage.</li>
-        <li><strong>Aesthetic Appeal:</strong> Folding doors create a bold and luxurious statement, elevating the overall look of your home.</li>
-        <li><strong>Panoramic Views:</strong> The large glass panels offer a stunning, panoramic view of your surroundings.</li>
-        <li><strong>Weather Resistant:</strong> Our <strong>bi-fold doors </strong> come with a robust sealing system that provides superior protection against rain and wind.</li>
+        <li><strong> เปิดพื้นที่ได้เต็มที่ (Maximum Opening): </strong> สามารถพับเก็บได้ทั้งหมด ทำให้เชื่อมต่อพื้นที่ได้อย่างสมบูรณ์แบบ </li>
+        <li><strong> ดีไซน์ที่โดดเด่น (Striking Design): </strong> มอบความรู้สึกหรูหราและมีสไตล์ที่แตกต่างจากหน้าต่างและประตูทั่วไป </li>
+        <li><strong> ทัศนียภาพกว้าง (Panoramic Views): </strong> ให้มุมมองที่กว้างขวางไร้สิ่งกีดขวาง ทำให้คุณเพลิดเพลินกับวิวภายนอกได้อย่างเต็มที่ </li>
+        <li><strong> เหมาะสำหรับทุกสภาพอากาศ:</strong> มาพร้อมระบบซีลที่แน่หนา ช่วยป้องกันน้ำและลมได้อย่างมีประสิทธิภาพ </li>
       </ul>
 
       <div class="text-center mt-10">
-        <img src="img/bifold/bifold101.jpg" alt="Casement Windows Feature"
+        <img src="../img/bifold/bifold101.jpg" alt="Casement Windows Feature"
              class="rounded-lg shadow-md inline-block max-w-full h-auto">
       </div>
     </div>
@@ -68,14 +79,14 @@
   <!-- Considerations -->
   <section class="bg-gray-50 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Considerations</h2>
+      <h2 class="text-2xl font-bold mb-4"> ข้อควรพิจารณา </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Stacking Space:</strong> When fully opened, the folded panels require space to stack on one or both sides, which needs to be considered during the design phase.</li>
-        <li><strong>Higher Cost:</strong> Due to the complex mechanism and larger size, they are generally more expensive than other door and window types.</li>
+        <li><strong> ต้องการพื้นที่เก็บ: </strong> เมื่อเปิดใช้งาน ตัวบานที่พับเก็บจะต้องใช้พื้นที่ด้านข้าง ซึ่งต้องวางแผนเผื่อสำหรับส่วนนี้ </li>
+        <li><strong> ราคา: </strong> ด้วยความซับซ้อนของกลไกและขนาดที่ใหญ่ ทำให้มีราคาสูงกว่าประตูและหน้าต่างประเภทอื่น </li>
       </ul>
 
       <div class="flex justify-center mt-10">
-        <img src="img/biflod002.jpg" alt="Casement Space"
+        <img src="../img/biflod002.jpg" alt="Casement Space"
              class="rounded-lg shadow-md max-w-[600px] w-full">
       </div>
     </div>
@@ -84,15 +95,15 @@
   <!-- Usage -->
   <section class="bg-gray-100 px-8 py-4">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Usage & Application Guide</h2>
+      <h2 class="text-2xl font-bold mb-4"> คำแนะนำในการเลือกใช้งาน </h2>
       <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
-        <li><strong>Indoor-Outdoor Flow:</strong> Idel for connecting living rooms to gardens, pools, or patios, creating a seamless transition.</li>
-        <li><strong>Commercial Spaces:</strong> A great choice for restaurants and cafes that want to create an open and inviting atmosphere.</li>
-        <li><strong>Entertaining Areas:</strong> Perfect for large entertaining spaces where you want to provide a sense of luxury and grand scale.</li>
+        <li><strong> เชื่อมต่อพื้นที่ภายนอก: </strong> เป็นตัวเลือกยอดนิยมสำหรับประตูที่เชื่อมห้องนั่งเล่นกับสวน, สระว่ายน้ำ หรือระเบียง </li>
+        <li><strong> ร้านอาหารและคาเฟ่: </strong> เหมาะสำหรับร้านที่ต้องการเปิดพื้นที่ให้โล่งและสร้างบรรยากาศที่สบายๆ </li>
+        <li><strong> พื้นที่รับรองแขก: </strong> ใช้เป็นประตูบานใหญ่สำหรับห้องรับรองแขก เพื่อสร้างความรู้สึกที่หรูหราและโอ่อ่า </li>
       </ul>
 
       <div class="flex justify-center mt-10">
-        <img src="img/bifold/bifold103.jpg" alt="Casement Usage"
+        <img src="../img/bifold/bifold103.jpg" alt="Casement Usage"
              class="rounded-lg shadow-md max-w-[600px] w-full">
       </div>
     </div>
