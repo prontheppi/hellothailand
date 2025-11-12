@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Awning Windows | Alustem</title>
+  <title> Awning Windows | Alustem</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -17,15 +17,15 @@
 </head>
 <body class="bg-white text-gray-900">
 
-  <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-black px-6 py-3">
+<!-- Navbar -->
+  <nav class="flex items-center justify-between bg-black px-2 py-4">
   <div class="flex items-center gap-[10px] flex-grow">
     <a href="#" class="flex items-center">
-      <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10 w-32">
+      <img src="../img/logo.png" alt="Alustem Logo" class="h-14 w-32">
     </a>
 
     <input type="text" placeholder="Search"
-      class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none w-96">
+      class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none h-14 w-32 sm:w-48 md:w-64 lg:w-96">
   </div>
 
     <ul class="flex space-x-10 text-xl ml-10">
@@ -40,91 +40,110 @@
   </nav>
 
   <!-- Banner -->
-  <section class="bg-[#315c4d] text-white px-8 py-4">
-    <h2 class="text-3xl font-bold">Awning Windows</h2>
-  </section>
-
   <!-- Hero Section -->
-  <section class="relative bg-[url('../img/awning/awning_cover.jpg')] bg-cover bg-center h-[300px]">
-    <div class="absolute bottom-5 left-5 bg-black/60 text-white p-5 rounded max-w-lg">
-      <p>
-        <strong>Awning windows</strong> are designed to open outwards from the bottom.
-        This unique design allows continuous airflow even on <strong>rainy days</strong>,
-        providing superior ventilation while maintaining privacy.
-      </p>
+  <section class="relative h-[450px] bg-[url('../img/awning/awning_cover.jpg')] bg-cover bg-center flex flex-col justify-start">
+
+     <div class="relative z-10 text-white w-full pt-[clamp(10px,2vw,20px)] px-8">
+      <!-- 🔹 แถบพื้นหลังครึ่งสี่เหลี่ยม + ครึ่งเฉียง -->
+
+      <!-- 🔹 แถบพื้นหลังชิดซ้ายสุดของหน้าจอ -->
+      <div class="relative inline-block mb-3">
+        <!-- ✅ ปรับตำแหน่งให้แทบสีเขียวชิดขอบซ้ายหน้าจอ -->
+        <div class="banner-shape absolute top-0 left-[-2rem] md:left-[-4rem] lg:left-[-6rem] -z-10"></div>
+        <h2 class="text-5xl font-bold px-4 py-8 whitespace-nowrap"> Awning Windows </h2>
+      </div>
+
+      <div class="relative w-screen left-1/2 -translate-x-1/2 my-4">
+        <!-- 🔹 แทบพื้นหลังเต็มหน้าจอ -->
+        <div class="absolute inset-0 bg-gray-500/60 -z-10"></div>
+
+        <p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed text-white px-14 py-4 max-w-[90vw]">
+          <strong>Awning windows</strong> are designed to open outwards from the bottom.
+          This unique design allows continuous airflow even on <strong>rainy days</strong>,
+          providing superior ventilation while maintaining privacy.
+        </p>
+      </div>
+      
       <a href="contact.html"
-         class="inline-block mt-3 bg-[#a52a2a] hover:bg-[#8b1e1e] text-white px-4 py-2 rounded font-semibold transition">
-         Please contact us
+        class="inline-block mt-16 bg-[#a52a2a] hover:bg-[#8b1e1e] text-white px-16 py-4 md:text-2xl rounded font-semibold transition">
+        Please contact us
       </a>
     </div>
+
   </section>
 
   <!-- Features -->
-  <section class="bg-white px-8 py-4">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Key Features & Benefits</h2>
-      <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
+  <section class="bg-white text-gray-900 py-8">
+     <div class="max-w-[90vw] px-10 lg:px-16">
+      <h2 class="text-5xl font-bold mb-4 text-left">Key Features & Benefits</h2>
+
+      <ul class="list-disc pl-16 space-y-3 text-lg leading-relaxed text-left md:text-xl lg:text-3xl mt-10 text-gray-900/60">
         <li><strong>Rain Protection:</strong> The outward-opening design acts like an awning, allowing airflow even during rain.</li>
         <li><strong>Continuous Airflow:</strong> Provides passive ventilation throughout the day.</li>
         <li><strong>Privacy and Security:</strong> Ideal for bathrooms and basements, ensuring light and privacy.</li>
         <li><strong>Energy Efficiency:</strong> Airtight seals improve insulation and reduce energy loss.</li>
       </ul>
 
-      <div class="text-center mt-10">
-        <img src="img/awning/awning101.jpg" alt="Awning Window Feature"
-             class="rounded-lg shadow-md inline-block max-w-full h-auto">
+      <div class="mt-10">
+        <img src="../img/awning/awning101.jpg" alt="Awning Window Feature"
+            class="rounded-lg shadow-md max-w-full h-auto">
       </div>
     </div>
   </section>
 
   <!-- Considerations -->
-  <section class="bg-gray-50 px-8 py-4">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Considerations</h2>
-      <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
+  <section class="bg-white text-gray-900 py-8">
+     <div class="max-w-[90vw] px-10 lg:px-16">
+      <h2 class="text-5xl font-bold mb-4 text-left"> Considerations </h2>
+
+      <ul class="list-disc pl-16 space-y-3 text-lg leading-relaxed text-left md:text-xl lg:text-3xl mt-10 text-gray-900/60">
         <li><strong>Exterior Cleaning:</strong> The sash doesn’t flip inward, making exterior cleaning harder.</li>
         <li><strong>Limited View:</strong> The opened sash can obstruct views and isn’t suitable for exits.</li>
       </ul>
-      <div class="flex justify-center mt-10">
-        <img src="img/awning/awning102.jpg" alt="Awning View"
-             class="rounded-lg shadow-md max-w-[600px] w-full">
+
+      <div class="mt-10">
+        <img src="../img/awning/awning102.jpg" alt="Considerations Window Feature"
+            class="rounded-lg shadow-md max-w-full h-auto">
       </div>
     </div>
   </section>
 
   <!-- Usage -->
-  <section class="bg-gray-100 px-8 py-4">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">Usage & Application Guide</h2>
-      <ul class="list-disc pl-6 space-y-2 text-lg leading-relaxed">
+  <section class="bg-white text-gray-900 py-8">
+     <div class="max-w-[90vw] px-10 lg:px-16">
+      <h2 class="text-5xl font-bold mb-4 text-left"> Usage & Application Guide </h2>
+
+      <ul class="list-disc pl-16 space-y-3 text-lg leading-relaxed text-left md:text-xl lg:text-3xl mt-10 text-gray-900/60">
         <li><strong>Bathrooms & Kitchens:</strong> Best for areas requiring airflow and privacy.</li>
         <li><strong>Combined with Other Windows:</strong> Often used above fixed windows for ventilation.</li>
         <li><strong>Basements:</strong> Tight seals make them secure and weatherproof.</li>
       </ul>
-      <div class="flex justify-center mt-10">
-        <img src="img/awning/awning103.jpg" alt="Awning Applications"
-             class="rounded-lg shadow-md max-w-[600px] w-full">
+
+      <div class="mt-10">
+        <img src="../img/awning/awning103.jpg" alt="Usage Window Feature"
+            class="rounded-lg shadow-md max-w-full h-auto">
       </div>
+
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="bg-black text-white px-8 py-4">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+  <section class="bg-black text-white py-16">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 px-6">
       <div>
-        <p>23/655 Pannasap 8 Soi Hua-Hin88,<br> Hua-Hin, Prachuap Khiri Khan 77110</p>
-        <p class="mt-4">081-898-6397<br> ldsbuildora@gmail.com</p>
+        <p p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed max-w-5xl py-3 text-gray-200">23/655 Pannasap 8 Soi Hua-Hin88,<br> Hua-Hin, Prachuap Khiri Khan 77110</p>
+        <p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed max-w-5xl py-3 text-gray-200">081 - 898 - 6397<br> ldsbuildora@gmail.com</p>
         <div class="flex space-x-4 mt-4">
-          <a href="#" class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="border border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="border border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="border border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
 
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.2285153321924!2d99.9486!3d12.5684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fda52ff!2sHua%20Hin!5e0!3m2!1sen!2sth!4v1701234567890"
-        class="rounded-lg w-full md:w-2/3 h-[400px]" allowfullscreen loading="lazy">
+      <iframe class="rounded-lg w-full md:w-2/5 h-64"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.2285153321924!2d99.9486!3d12.5684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fda52ff!2sHua%20Hin!5e0!3m2!1sen!2sth!4v1701234567890">
       </iframe>
+      
     </div>
   </section>
 
@@ -134,4 +153,55 @@
   </footer>
 
 </body>
+
+<!-- 🧩 CSS -->
+<style>
+.banner-shape {
+  position: absolute;
+  height: 110%;
+  width: clamp(450px, 55vw, 800px);
+  background-color: #315c4d;
+  clip-path: polygon(0 0, 70% 0, 62% 100%, 0% 100%);
+  opacity: 0.95;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+</style>
+
+<script>
+  // ❌ ปิดคลิกขวาทุกอุปกรณ์
+  document.addEventListener("contextmenu", event => event.preventDefault());
+
+  // ❌ ปิดปุ่มลัดดาวน์โหลด / Inspect (PC)
+  document.addEventListener("keydown", e => {
+    if (
+      (e.ctrlKey && (e.key === 's' || e.key === 'S')) ||
+      (e.ctrlKey && (e.key === 'u' || e.key === 'U')) ||
+      (e.key === 'F12') ||
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i'))
+    ) {
+      e.preventDefault();
+      alert("⛔️ Download & Inspect are disabled");
+    }
+  });
+
+  // ⚙️ ตรวจสอบอุปกรณ์ (Mobile vs Desktop)
+  const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+  if (!isMobile) {
+    // 📱❌ ป้องกัน pinch-zoom เฉพาะ Desktop เท่านั้น
+    document.addEventListener("touchstart", e => {
+      if (e.touches.length > 1) e.preventDefault();
+    }, { passive: false });
+  }
+
+  // 📸 ป้องกัน long-press บนรูปภาพทุกอุปกรณ์
+  document.addEventListener("touchend", e => {
+    if (e.target.tagName === "IMG") e.preventDefault();
+  });
+
+  console.log("🛡️ Protection: Desktop = strict, Mobile = zoom allowed");
+</script>
+
 </html>

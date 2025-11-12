@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>Windows & Doors</title>
+  <title> Windows & Doors </title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -14,6 +14,10 @@
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/video/lg-video.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/lg-video.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lg-zoom.js"></script>
+
   <style>
   @keyframes fade-in { from {opacity:0;} to {opacity:1;} }
   .animate-fade-in { animation: fade-in 1s ease forwards; }
@@ -24,64 +28,89 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script src="../lang.js"></script>
 
   <style>
     body { font-family: 'Sarabun', sans-serif; }
   </style>
+
+  <style>
+    .thumbSwiper .swiper-slide-thumb-active img {
+      opacity: 1 !important;
+      border: 2px solid #fff;
+    }
+
+    /* 🎯 ปรับขนาดและสีของจุดเลื่อน (pagination bullets) */
+    .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.6);
+      opacity: 1;
+      margin: 6px !important;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-pagination-bullet:hover {
+      background: #141313; /* สีตอน hover */
+      transform: scale(1.3);
+    }
+
+    /* ✅ จุดที่ active */
+    .swiper-pagination-bullet-active {
+      background: #000000; /* สีหลักของ bullet active */
+      width: 18px;
+      height: 18px;
+      box-shadow: 0 0 10px #5f5e70, 0 0 20px #6e6e8e;
+      transform: scale(1.2);
+      border: 2px solid white; /* ขอบเด่นขึ้น */
+    }
+
+    /* 🧭 ปรับตำแหน่ง pagination ให้ชัดขึ้น (ถ้าต้องการ) */
+    .swiper-pagination {
+      bottom: 15px !important;
+      z-index: 50;
+    }
+</style>
+  
 </head>
 
 <body class="bg-black text-white">
 
-  <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-black px-6 py-3">
-    <div class="flex items-center gap-[10px] flex-grow">
-      <a href="#" class="flex items-center">
-        <img src="../img/logo.jpg" alt="Alustem Logo" class="h-10 w-32">
-      </a>
+  <div id="navbar"></div>
 
-      <input type="text" placeholder="Search"
-        class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none w-96">
-    </div>
-
-      <ul class="flex space-x-10 text-xl ml-10">
-        <li><a href="index.html" class="text-white hover:text-red-500"> หน้าหลัก </a></li>
-        <li><a href="gallery.html" class="text-white hover:text-red-500"> แกลเลอรี่ผลงาน </a></li>
-        <li><a href="contact.html" class="text-white hover:text-red-500"> ติดต่อเรา </a></li>
-      </ul>
-
-      <div class="flex items-center space-x-2 text-xl ml-10">
-        <a href="#" id="langBtn" class="text-white font-bold">EN</a>
-      </div>
-  </nav>
-
-    <!-- Hero Section -->
-    <section class="flex flex-col items-center justify-center h-screen bg-[url('windows-doors.jpg')] bg-cover bg-center text-center text-white">
-      <img src="../img/home.jpg" alt="Window 1"  class="w-[75%] max-w-none h-auto rounded-lg shadow-lg object-cover">
-    </section>
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center justify-center bg-[url('../img/windows-doors.jpg')] bg-cover bg-center text-center text-white py-4 md:py-10">
+    <img src="../img/home.jpg" alt="Window 1"
+        class="w-[96%] aspect-[16/9] object-cover rounded-lg shadow-lg">
+  </section>
 
   <!-- Intro Section -->
-  <section class="bg-black py-8">
-    <div class="max-w-5xl mx-auto px-6">
-
-      <h2 class="text-5xl font-bold mb-6"> ประตูและหน้าต่างคุณภาพสูง เพื่อบ้านในฝันของคุณ </h2>
-      <p class="text-lg mb-6 leading-relaxed">
+  <section class="bg-black py-16">
+    <div class="max-w-5xl mx-auto px-4 lg:ml-[5%] xl:ml-[12%]">
+      <h2 class="text-4xl md:text-5xl font-bold mb-3"> ประตูและหน้าต่างคุณภาพสูง <br> เพื่อบ้านในฝันของคุณ </h2>
+      <p class="text-base md:text-xl mb-6 leading-relaxed text-gray-200 max-w-3xl py-3">
         ประตูและหน้าต่างคือหัวใจของบ้าน ที่ไม่ได้เป็นเพียงแค่ทางเข้า-ออก แต่ยังเป็นส่วนสำคัญในการสร้างบรรยากาศ 
         ความปลอดภัย และความสวยงามโดยรวมให้กับบ้านของคุณ ที่ <strong> Alustem windows and doors </strong>
         เราคัดสรรเฉพาะวัสดุดีที่สุด และมีทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา เพื่อให้คุณได้ประตูและหน้าต่างที่สมบูรณ์แบบสำหรับบ้านของคุณ
       </p>
       
-      <a href="#contact" class="bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-md font-semibold"> ติดต่อเรา </a>
+      <a href="#contact" 
+        class="bg-red-700 hover:bg-red-800 text-white px-10 py-3 rounded-md font-semibold md:text-xl"> 
+        ติดต่อเรา
+      </a>
 
     </div>
   </section>
 
   <!-- part 1 : Our Doors & Windows Products -->
-  <section class="bg-white text-gray-900 py-8 px-4">
-    <div class="max-w-6xl mx-auto">     
+  <section class="bg-white text-gray-900 py-8">
+    <div class="max-w-5xl mx-auto px-2 lg:ml-[5%] xl:ml-[12%]">
+      <h2 class="text-5xl md:text-5xl font-bold mb-2"> ผลิตภัณฑ์ ประตู หน้าต่าง ของเรา </h2>  
 
-      <h2 class="text-4xl font-bold mb-8 text-gray-800"> ผลิตภัณฑ์ ประตู หน้าต่าง ของเรา </h2>
-      <p class="text-lg mb-3">
+      <p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed max-w-5xl py-3 text-gray-600">
         ที่ <strong> Alustem, </strong> เราเข้าใจว่าประตูและหน้าต่างเป็นมากกว่าแค่ทางเข้าออก แต่คือองค์ประกอบที่สำคัญที่กำหนดความสวยงาม 
         ความสะดวกสบาย และประสิทธิภาพในการอยู่อาศัยของบ้านคุณ ผลิตภัณฑ์ของเราโดดเด่นด้วยนวัตกรรมกระจกชั้นนำ ไม่ว่าจะเป็น
         <strong> กระจกสองชั้น (Double Glass) </strong> และ <strong> กระจกฉนวน (Insulated Glass Units - IGU)</strong> 
@@ -90,7 +119,7 @@
         ที่สงบเงียบอย่างแท้จริง
       </p>
       
-      <p class="text-lg mb-3">
+      <p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed max-w-5xl py-3 text-gray-600">
         เพื่อความปลอดภัยสูงสุด เราเลือกใช้ <strong> กระจกลามิเนต (Laminated Glass) </strong> และ <strong> กระจกเทมเปอร์ (Tempered Glass) </strong> 
         ที่มีความแข็งแรงทนทานสูง พร้อมเสริมด้วย <strong> มาตราฐานยุโรป (EURO Profile) </strong> และ <strong> ยูพีวีซี (uPVC) </strong> 
         ที่รับประกันความแข็งแรงและช่วยให้ <strong> กันน้ำ (Water Proofing) </strong> ได้อย่างมีประสิทธิภาพ นอกจากนี้ เรายังให้บริการติดตั้ง
@@ -98,34 +127,52 @@
         ที่ออกแบบมาโดยเฉพาะเพื่อการใช้งานที่ปลอดภัยและสวยงาม มั่นใจได้ว่าทุกผลิตภัณฑ์ของเราจะช่วยส่งเสริม <strong> การไหลเวียนของอากาศ (Air Flow) </strong>
         ที่ดี ทำให้บ้านของคุณน่าอยู่ยิ่งขึ้น
       </p>
-        
-      <br>
-      <p><strong> ค้นพบประตูและหน้าต่างที่ใช่ เพื่อบ้านที่สมบูรณ์แบบ </strong></p>
+      
+      <p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed max-w-5xl py-3 text-gray-600">
+        <strong> ค้นพบประตูและหน้าต่างที่ใช่ เพื่อบ้านที่สมบูรณ์แบบ </strong>
+      </p>
 
     </div>
   </section>
 
   <!-- ✅ part 2 : Casement Swing Doors -->
-  <section id="casement-gallery" class="bg-white text-gray-900 py-8 px-4">
-    <div class="max-w-6xl mx-auto">     
-
-      <h2 class="text-4xl font-bold mb-8 text-gray-800"> ประตูและหน้าต่างบานเปิด </h2>
-
-      <p class="text-lg mb-3">
+  <section id="casement-gallery" class="bg-white text-gray-900 py-2">
+    <div class="max-w-5xl mx-auto px-2 lg:ml-[5%] xl:ml-[12%]">
+      
+      <h2 class="text-5xl font-bold mb-8 text-gray-800"> ประตูและหน้าต่างบานเปิด </h2>
+      
+      <p class="text-lg md:text-xl lg:text-2xl mb-3 leading-relaxed max-w-5xl py-1 text-gray-600">
         <strong> ดีไซน์คลาสสิกที่ใช้งานจริง </strong>
         หน้าต่างและประตูบานเปิดของเราช่วยให้คุณระบายอากาศได้เต็มที่ และทำความสะอาดได้ง่ายจากด้านในเหมาะสำหรับบ้านที่ต้องการความเรียบง่ายแต่เปี่ยมไปด้วยประสิทธิภาพ
       </p>
 
-      <!-- Gallery -->
+      <!-- Gallery Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <img src="../img/casement001.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/casement002.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/casement003.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-      </div>      
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/casement001.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Casement 1">
+        </div>
 
-      <div class="mt-10 text-center">
-        <a href="casement.html" class="bg-green-900 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">
-            อ่าน เพิ่มเติม ...
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/casement002.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Casement 2">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/casement003.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Casement 3">
+        </div>
+      </div>
+
+
+
+      <div class="max-w-5xl text-lg md:text-xl lg:text-2xl py-10 lg:ml-[1%] xl:ml-[1%]">
+        <a href="casement.html"
+          class="inline-block bg-green-900 hover:bg-green-700 text-white px-[5%] py-3 rounded-lg font-semibold">
+          อ่าน เพิ่มเติม ...
         </a>
       </div>
 
@@ -133,25 +180,84 @@
   </section>    
   
   <!-- part 3 : Awning Windows -->
-  <section id= "awning-gallery" class="bg-white text-gray-900 py-8 px-4">
-    <div class="max-w-6xl mx-auto">     
+  <section id= "awning-gallery" class="bg-white text-gray-900 py-2">
+    <div class="max-w-5xl mx-auto px-2 lg:ml-[5%] xl:ml-[12%]">
 
-      <h2 class="text-4xl font-bold mb-8 text-gray-800"> หน้าต่างบานกระทุ่ง </h2>
-      <p class="text-lg mb-3">
+      <h2 class="text-5xl font-bold mb-8 text-gray-800"> หน้าต่างบานกระทุ่ง </h2>
+      
+      <p class="text-lg md:text-xl lg:text-2xl mb-3 leading-relaxed max-w-5xl py-1 text-gray-600">
         <strong> หน้าต่างที่ให้ความเป็นส่วนตัวและกันฝน </strong> 
         ออกแบบมาเพื่อระบายอากาศได้แม้ในวันที่ฝนตก เหมาะสำหรับ <strong> ห้องน้ำ </strong> และ <strong> ห้องครัว </strong> 
         ที่ต้องการความปลอดภัยและอากาศถ่ายเท
       </p>      
-
-      <!-- Gallery -->
+     
+      <!-- Gallery Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <img src="../img/awning001.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/awning002.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/awning003.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/awning001.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Awning 1">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/awning002.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Awning 2">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/awning003.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Awning 3">
+        </div>
       </div>
 
-        <div class="mt-10 text-center">
-          <a href="awning.html" class="bg-green-900 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">
+      <div class="max-w-5xl text-lg md:text-xl lg:text-2xl py-10 lg:ml-[1%] xl:ml-[1%]">
+        <a href="awning.html" 
+          class="inline-block bg-green-900 hover:bg-green-700 text-white px-[5%] py-2 rounded-lg font-semibold">
+           อ่าน เพิ่มเติม ...
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- part 4 : Sliding Doors & Windows -->
+  <section class="bg-white text-gray-900 py-2">
+    <div class="max-w-5xl mx-auto px-2 lg:ml-[5%] xl:ml-[12%]">
+      
+      <h2 class="text-5xl font-bold mb-8 text-gray-800"> ประตูและหน้าต่างบานเลื่อน </h2>
+      
+      <p class="text-lg md:text-xl lg:text-2xl mb-3 leading-relaxed max-w-5xl py-1 text-gray-600">
+        <strong> ประหยัดพื้นที่ เพิ่มความทันสมัย </strong> 
+        ประตูและหน้าต่างบานเลื่อนคือตัวเลือกที่ดีที่สุดสำหรับพื้นที่จำกัด <strong> ดีไซน์ที่ทันสมัย </strong> ช่วยให้บ้านของคุณดูโล่งกว้างและเชื่อมต่อกับพื้นที่ภายนอกได้อย่างไร้รอยต่อ
+      </p>      
+
+
+      <!-- Gallery Section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/slide001.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Sliding 1">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/slide002.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Sliding 2">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/slide003.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Sliding 3">
+        </div>
+      </div>
+
+        <div class="max-w-5xl text-lg md:text-xl lg:text-2xl py-10 lg:ml-[1%] xl:ml-[1%]">
+          <a href="sliding.html" 
+            class="inline-block bg-green-900 hover:bg-green-700 text-white px-[5%] py-2 rounded-lg font-semibold">
             อ่าน เพิ่มเติม ...
           </a>
         </div>
@@ -159,51 +265,42 @@
     </div>
   </section>
 
-  <!-- part 4 : Sliding Doors & Windows -->
-  <section class="bg-white text-gray-900 py-8 px-4">
-    <div class="max-w-6xl mx-auto">
- 
-      <h2 class="text-4xl font-bold mb-8 text-gray-800"> ประตูและหน้าต่างบานเลื่อน </h2>
-      <p class="text-lg mb-3">
-        <strong> ประหยัดพื้นที่ เพิ่มความทันสมัย </strong> 
-        ประตูและหน้าต่างบานเลื่อนคือตัวเลือกที่ดีที่สุดสำหรับพื้นที่จำกัด <strong> ดีไซน์ที่ทันสมัย </strong> ช่วยให้บ้านของคุณดูโล่งกว้างและเชื่อมต่อกับพื้นที่ภายนอกได้อย่างไร้รอยต่อ
-      </p>      
-
-      <!-- Gallery -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <img src="../img/slide001.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/slide002.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/slide003.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-      </div>
-
-      <div class="mt-10 text-center">
-        <a href="sliding.html" class="bg-green-900 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">
-          อ่าน เพิ่มเติม ...
-        </a>
-      </div>
-
-    </div>
-  </section>
-
   <!-- part 5 : Folding/Bi-fold Doors & Windows -->
-  <section class="bg-white text-gray-900 py-8 px-4">
-    <div class="max-w-6xl mx-auto">     
+  <section class="bg-white text-gray-900 py-2">
 
-      <h2 class="text-4xl font-bold mb-8 text-gray-800"> ประตูและหน้าต่างบานเฟี้ยม </h2>
-      <p class="text-lg mb-3">
+    <div class="max-w-5xl mx-auto px-2 lg:ml-[5%] xl:ml-[12%]">
+
+      <h2 class="text-5xl font-bold mb-8 text-gray-800"> ประตูและหน้าต่างบานเฟี้ยม </h2>
+
+      <p class="text-lg md:text-xl lg:text-2xl mb-3 leading-relaxed max-w-5xl py-1 text-gray-600">
         <strong> เปิดกว้าง สร้างพื้นที่โล่ง </strong> ประตูและหน้าต่างบานเฟี้ยมช่วยให้คุณเปลี่ยนพื้นที่ธรรมดาให้กลายเป็น
         <strong> พื้นที่เปิดโล่ง </strong> ที่เชื่อมต่อกับสวนหรือระเบียงได้อย่างสวยงาม เหมาะสำหรับบ้านที่ต้องการดีไซน์ที่โดดเด่นและใช้งานได้หลากหลาย
       </p>      
 
-      <!-- Gallery -->
+      <!-- Gallery Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <img src="../img/biflod001.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/biflod002.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/biflod003.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/biflod001.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Folding 1">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/biflod002.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Folding 2">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/biflod003.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Folding 3">
+        </div>
       </div>
 
-      <div class="mt-10 text-center">
-        <a href="bifold.html" class="bg-green-900 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">
+      <div class="max-w-5xl text-lg md:text-xl lg:text-2xl py-10 lg:ml-[1%] xl:ml-[1%]">
+        <a href="bifold.html" 
+          class="inline-block bg-green-900 hover:bg-green-700 text-white px-[5%] py-2 rounded-lg font-semibold">
           อ่าน เพิ่มเติม ...
         </a>
       </div>
@@ -212,24 +309,42 @@
   </section>
 
   <!-- part 6 : Hanging/Sliding Barn Doors -->
-  <section class="bg-white text-gray-900 py-8 px-4">
-    <div class="max-w-6xl mx-auto">     
+  <section class="bg-white text-gray-900 py-2">
 
-      <h2 class="text-4xl font-bold mb-8 text-gray-800"> ประตูบานแขวน </h2>
-      <p class="text-lg mb-3">
+    <div class="max-w-5xl mx-auto px-2 lg:ml-[5%] xl:ml-[12%]">
+
+      <h2 class="text-5xl font-bold mb-8 text-gray-800"> ประตูบานแขวน </h2>
+
+      <p class="text-lg md:text-xl lg:text-2xl mb-3 leading-relaxed max-w-5xl py-1 text-gray-600">
         <strong> โดดเด่น มีสไตล์ ประหยัดพื้นที่ </strong> ประตูบานแขวนคือการผสมผสานระหว่างสไตล์ที่ทันสมัยกับความทนทาน เหมาะสำหรับการแบ่งพื้นที่
         ภายในบ้านให้เป็นสัดส่วนอย่างมีดีไซน์
       </p>      
 
-      <!-- Gallery -->
+      <!-- Gallery Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <img src="../img/hanging001.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/hanging002.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/hanging003.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/hanging001.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Hanging 1">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/hanging002.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Hanging 2">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/hanging003.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Hanging 3">
+        </div>
       </div>
 
-      <div class="mt-10 text-center">
-        <a href="hanging.html" class="bg-green-900 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">
+
+      <div class="max-w-5xl text-lg md:text-xl lg:text-2xl py-10 lg:ml-[1%] xl:ml-[1%]">
+        <a href="hanging.html" 
+          class="inline-block bg-green-900 hover:bg-green-700 text-white px-[5%] py-2 rounded-lg font-semibold">
           อ่าน เพิ่มเติม ...
         </a>
       </div>
@@ -238,24 +353,42 @@
   </section>
 
   <!-- part 7 : Special Doors & Windows -->
-  <section class="bg-white text-gray-900 py-8 px-4">
-    <div class="max-w-6xl mx-auto">
+  <section class="bg-white text-gray-900 py-2">
 
-      <h2 class="text-4xl font-bold mb-8 text-gray-800"> ประตูและหน้าต่างบานพิเศษ </h2>
-      <p class="text-lg mb-3">
+    <div class="max-w-5xl mx-auto px-2 lg:ml-[5%] xl:ml-[12%]">
+
+      <h2 class="text-5xl font-bold mb-8 text-gray-800"> ประตูและหน้าต่างบานพิเศษ </h2>
+
+      <p class="text-lg md:text-xl lg:text-2xl mb-3 leading-relaxed max-w-5xl py-1 text-gray-600">
         <strong> นวัตกรรมการใช้งานที่เหนือกว่า </strong> ประตูและหน้าต่างบานพิเศษคือการรวมฟังก์ชันหลายอย่างไว้ในบานเดียว เช่น การเพิ่มหน้าต่างบานเปิดไว้ในบานใหญ่
         เพื่อเพิ่มการระบายอากาศที่ยอดเยี่ยมและดีไซน์ที่โดดเด่น
       </p>      
 
-      <!-- Gallery -->
+
+      <!-- Gallery Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <img src="../img/spacial001.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/spacial002.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
-        <img src="../img/spacial003.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform">
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/spacial001.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Special 1">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/spacial002.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Special 2">
+        </div>
+
+        <div class="relative overflow-hidden rounded-lg shadow-lg group perspective">
+          <img src="../img/spacial003.svg" 
+              class="transition-transform duration-300 ease-out group-hover:scale-105 transform-gpu" 
+              alt="Special 3">
+        </div>
       </div>
 
-      <div class="mt-10 text-center">
-        <a href="special.html" class="bg-green-900 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">
+      <div class="max-w-5xl text-lg md:text-xl lg:text-2xl py-10 lg:ml-[1%] xl:ml-[1%]">
+        <a href="special.html" 
+          class="inline-block bg-green-900 hover:bg-green-700 text-white px-[5%] py-2 rounded-lg font-semibold">
           อ่าน เพิ่มเติม ...
         </a>
       </div>
@@ -264,95 +397,96 @@
   </section>
 
   <!-- part 8 : About us -->
-  <section class="bg-white text-gray-900 py-8 px-4">
-    
-    <div class="relative mb-10 mx-auto">
-      <!-- โลโก้ตรงกลาง -->
-      <img src="../img/logo.jpg" alt="Logo" class=" h-20 mx-auto">
+  <section class="bg-white text-gray-900 py-2">
 
-      <!-- ข้อความอยู่ทางซ้าย -->
-       <div class="max-w-6xl mx-auto ">
-        <h2 class="text-4xl font-bold text-gray-800 ">
-          เกี่ยวกับเรา
-        </h2>
+    <div class="max-w-5xl mx-auto px-2 lg:ml-[5%] xl:ml-[12%]">
+ 
+      <div class="flex items-center justify-left gap-[25%] mb-6">
+        <h2 class="text-5xl font-bold text-gray-800"> เกี่ยวกับเรา </h2>
+        <img src="../img/logo.jpg" alt="Logo" class="h-20">
       </div>
-    </div>
 
-      <div class="max-w-6xl mx-auto">
-        <p class="text-lg mb-3">
+      <p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed max-w-5xl py-3 text-gray-600">
           ที่ <strong> Alustem, </strong> เราเชื่อว่าประตูและหน้าต่างที่ดีที่สุด คือสิ่งที่ตอบโจทย์ความต้องการของลูกค้าได้อย่างเหมาะสมบูรณ์แบบ 
           เราใส่ใจในทุกรายละเอียด ตั้งแต่การคัดสรร <strong> ผลิตภัณฑ์คุณภาพสูง </strong> ที่เหมาะสมกับแต่ละโครงการ ไปจนถึงกระบวนการผลิต
           ที่ได้มาตราฐาน เพื่อให้มั่นใจว่าคุณจะได้รับสินค้าที่ดีที่สุด เราพร้อมให้ <strong> คำปรึกษาและคำแนะนำ </strong> ที่ดีเยี่ยม เพื่อช่วยให้คุณเลือก
           ประตูและหน้าต่างที่ <strong> สวยงาม ใช้งาน สะดวก </strong> และ <strong> แข็งแรงทนทาน </strong> ตามที่คุณต้องการ
-        </p>
+      </p> 
 
-        <p class="text-lg mb-3">
-          ด้วย <strong> ทีมงานติดตั้งที่มีประสบการณ์มากกว่า 10 ปีในพื้นที่ </strong> ทำให้เราเข้าใจถึงสภาพแวดล้อมและปัจจัยต่างๆ ที่ส่งผลต่อการติดตั้งได้อย่างดีเยี่ยม
-          เราจึงมั่นใจว่างานของเราจะมีความแม่นยำและได้มาตราฐานสูงสุด และที่สำคัญ เรามี <strong> บริการหลังการขาย </strong> ที่พร้อมดูแลคุณในทุกขั้นตอน 
-          เพื่อให้คุณมั่นใจและสบายใจในทุกการใช้งาน
-        </p>
-      </div>
+      <p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed max-w-5xl py-3 text-gray-600">
+        ด้วย <strong> ทีมงานติดตั้งที่มีประสบการณ์มากกว่า 10 ปีในพื้นที่ </strong> ทำให้เราเข้าใจถึงสภาพแวดล้อมและปัจจัยต่างๆ ที่ส่งผลต่อการติดตั้งได้อย่างดีเยี่ยม
+        เราจึงมั่นใจว่างานของเราจะมีความแม่นยำและได้มาตราฐานสูงสุด และที่สำคัญ เรามี <strong> บริการหลังการขาย </strong> ที่พร้อมดูแลคุณในทุกขั้นตอน 
+        เพื่อให้คุณมั่นใจและสบายใจในทุกการใช้งาน
+      </p>
 
     </div>
   </section>
 
+
   <!-- Gallery Section -->
   <section id="project-gallery" class="max-w-6xl mx-auto py-16 px-6">
-
-
-    <h2 class="text-3xl font-bold mb-8 text-center"> แกลเลอรี่ผลงาน </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-      <!-- Project 1 -->
-      <div id="project1-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
-
-        <!-- Thumbnail image -->
-        <a href="../img/project1/1.jpg" class="thumbnail">
-          <img src="../img/project1/1.jpg"
-            class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
+    
+    <div class="flex items-center justify-left gap-[50%] mb-6">
+        <h2 class="text-5xl font-bold text-gray-200"> แกลเลอรี่ผลงาน </h2>
+        <a href="gallery.html" 
+          class="inline-block bg-green-900 hover:bg-green-700 text-white px-[5.5%] py-2 rounded-lg font-semibold text-lg md:text-lg ">
+          โปรเจค อื่นๆ ...
         </a>
+    </div>
 
-        <!-- Project Title -->
-        <div class="bg-red-600 text-white text-center font-bold text-2xl py-6">โปรเจค 1</div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!--  Project 1 -->
+    <div id="project1-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+
+      <!-- Thumbnail image -->
+      <a href="../img/project1/1.jpg"  class="thumbnail">
+        <img src="../img/project1/1.jpg"
+          class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
+      </a>
+
+      <!--  Project Title -->
+      <div class="bg-red-600 text-white text-center font-bold text-3xl py-4"> โปรเจค 1 </div>
 
         <!-- Overlay with "View All" + count -->
-        <div
-          class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
-          onclick="openGallery('project1-gallery')">
-          <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
-            แสดงทั้งหมด
-          </span>
-          <span class="text-sm text-white/90">
-            15 รูปภาพ + 1 วิดีโอ
-          </span>
-        </div>
-
-        <!-- Hidden gallery items: images + video -->
-        <a href="../img/project1/2.jpg" class="hidden"></a>
-        <a href="../img/project1/3.jpg" class="hidden"></a>
-        <a href="../img/project1/4.jpg" class="hidden"></a>
-        <a href="../img/project1/5.jpg" class="hidden"></a>
-        <a href="../img/project1/6.jpg" class="hidden"></a>
-        <a href="../img/project1/7.jpg" class="hidden"></a>
-        <a href="../img/project1/8.jpg" class="hidden"></a>
-        <a href="../img/project1/9.jpg" class="hidden"></a>
-        <a href="../img/project1/10.jpg" class="hidden"></a>
-        <a href="../img/project1/11.jpg" class="hidden"></a>
-        <a href="../img/project1/12.jpg" class="hidden"></a>
-        <a href="../img/project1/13.jpg" class="hidden"></a>
-        <a href="../img/project1/14.jpg" class="hidden"></a>
-        <a href="../img/project1/15.jpg" class="hidden"></a>
-
-        <!-- Video support -->
-        <a
-          data-video='{"source": [{"src":"../img/project1/1.mp4","type":"video/mp4"}],"attributes":{"controls":true}}'
-          href="../img/project1/1.mp4"
-          class="hidden">
-        </a>
-
+      <div
+        class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
+        onclick="openGallery('project1-gallery')">
+        <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
+          แสดงทั้งหมด
+        </span>
+        
+        <span class="text-sm text-white/90">
+          15 รูปภาพ + 1 วิดีโอ
+        </span>
       </div>
 
-      <!--  Project 2 -->
+      <!-- Hidden gallery items: images + video -->
+      <a href="../img/project1/2.jpg" class="hidden"></a>
+      <a href="../img/project1/3.jpg" class="hidden"></a>
+      <a href="../img/project1/4.jpg" class="hidden"></a>
+      <a href="../img/project1/5.jpg" class="hidden"></a>
+      <a href="../img/project1/6.jpg" class="hidden"></a>
+      <a href="../img/project1/7.jpg" class="hidden"></a>
+      <a href="../img/project1/8.jpg" class="hidden"></a>
+      <a href="../img/project1/9.jpg" class="hidden"></a>
+      <a href="../img/project1/10.jpg" class="hidden"></a>
+      <a href="../img/project1/11.jpg" class="hidden"></a>
+      <a href="../img/project1/12.jpg" class="hidden"></a>
+      <a href="../img/project1/13.jpg" class="hidden"></a>
+      <a href="../img/project1/14.jpg" class="hidden"></a>
+      <a href="../img/project1/15.jpg" class="hidden"></a>
+
+      <!-- Video support -->
+      <a
+        data-video='{"source": [{"src":"../img/project1/1.mp4","type":"video/mp4"}],"attributes":{"controls":true}}'
+        href="../img/project1/1.mp4"
+        class="hidden">
+      </a>
+
+    </div>
+
+      <!-- Project 2 -->
       <div id="project2-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
 
         <!-- Thumbnail image -->
@@ -362,13 +496,12 @@
         </a>
 
         <!-- Project Title -->
-        <div class="bg-red-600 text-white text-center font-bold text-2xl py-6"> โปรเจค 2 </div>
+        <div class="bg-red-600 text-white text-center font-bold text-3xl py-4"> โปรเจค 2 </div>
 
         <!-- Overlay with "View All" + count -->
         <div
           class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
           onclick="openGallery('project2-gallery')">
-
           <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
             แสดงทั้งหมด
           </span>
@@ -406,7 +539,7 @@
         </a>
 
         <!-- Project Title -->
-        <div class="bg-red-600 text-white text-center font-bold text-2xl py-6"> โปรเจค 3 </div>
+        <div class="bg-red-600 text-white text-center font-bold text-3xl py-4"> โปรเจค 3 </div>
 
         <!-- Overlay with "View All" + count -->
         <div
@@ -445,13 +578,12 @@
         </a>
 
         <!-- Project Title -->
-        <div class="bg-red-600 text-white text-center font-bold text-2xl py-6"> โปรเจค 4 </div>
+        <div class="bg-red-600 text-white text-center font-bold text-3xl py-4"> โปรเจค 4 </div>
 
         <!-- Overlay with "View All" + count -->
         <div
           class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
           onclick="openGallery('project4-gallery')">
-
           <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
             แสดงทั้งหมด
           </span>
@@ -472,13 +604,13 @@
       <div id="project5-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
 
         <!-- Thumbnail image -->
-        <a href="../img/project5/1.jpg" class="thumbnail">
+        <a href="../img/project5/1.jpg" class="thumbnail"> 
           <img src="../img/project5/1.jpg"
             class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
         </a>
 
         <!-- Project Title -->
-        <div class="bg-red-600 text-white text-center font-bold text-2xl py-6"> โปรเจค 5 </div>
+        <div class="bg-red-600 text-white text-center font-bold text-3xl py-4"> โปรเจค 5 </div>
 
         <!-- Overlay with "View All" + count -->
         <div
@@ -493,9 +625,9 @@
         </div>
 
         <!-- Hidden gallery items: images + video -->
-        <a href="../img/project2/2.jpg" class="hidden"></a>
-        <a href="../img/project2/3.jpg" class="hidden"></a>
-        <a href="../img/project2/4.jpg" class="hidden"></a>
+        <a href="../img/project5/2.jpg" class="hidden"></a>
+        <a href="../img/project5/3.jpg" class="hidden"></a>
+        <a href="../img/project5/4.jpg" class="hidden"></a>
         <!-- ... เพิ่มตามจำนวนจริง -->
 
         <!-- Video support -->
@@ -517,7 +649,7 @@
 
       </div>
 
-      <!-- Project 6 -->
+      <!-- Project 6 -->   
       <div id="project6-gallery" class="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
 
         <!-- Thumbnail image -->
@@ -526,18 +658,18 @@
             class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out opacity-0 animate-fade-in" />
         </a>
 
-        <!--  Project Title -->
-        <div class="bg-red-600 text-white text-center font-bold text-2xl py-6"> โปรเจค 6 </div>
+        <!-- Project Title -->
+        <div class="bg-red-600 text-white text-center font-bold text-3xl py-4"> โปรเจค 6 </div>
 
-        <!--  Overlay with "View All" + count -->
+        <!-- Overlay with "View All" + count -->
         <div
           class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
-          onclick="openGallery('project6-gallery')">
+          onclick="openGallery('project4-gallery')">
           <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
             แสดงทั้งหมด
           </span>
           <span class="text-sm text-white/90">
-            10 รูปภาพ 
+            5 รูปภาพ 
           </span>
         </div>
 
@@ -546,25 +678,23 @@
         <a href="../img/project6/3.jpg" class="hidden"></a>
         <a href="../img/project6/4.jpg" class="hidden"></a>
         <a href="../img/project6/5.jpg" class="hidden"></a>
-        <a href="../img/project6/6.jpg" class="hidden"></a>
-        <a href="../img/project6/7.jpg" class="hidden"></a>
-        <a href="../img/project6/8.jpg" class="hidden"></a>
-        <a href="../img/project6/9.jpg" class="hidden"></a>
-        <a href="../img/project6/10.jpg" class="hidden"></a>
 
-      </div>      
-  </section>
+      </div>
+
+ </section>
 
 
 <!-- Review Section -->
 <section class="py-12 bg-[#365A4C] text-white">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-3xl font-bold"> รีวิว </h2>
-      <a href="review.html"
-         class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 py-2 rounded transition">
-        เพิ่มรีวิว
-      </a>
+
+        
+    <div class="flex items-center justify-left gap-[67%] mb-6">
+        <h2 class="text-5xl font-bold text-gray-200"> รีวิว </h2>
+        <a href="gallery.html" 
+          class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-[5%] py-2 rounded-lg font-semibold text-lg md:text-xl ">
+          เพิ่มรีวิว
+        </a>
     </div>
 
     <!-- Review Card 1 -->
@@ -593,93 +723,257 @@
   </div>
 </section>
 
+<div id="footer"></div>
+  
 
-  <!-- Contact Section -->
-  <section class="bg-black text-white py-16">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 px-6">
-      <div>
-        <p class="mb-4">23/655 Pannasap 8 Soi Hua-Hin88,<br> Hua-Hin, Prachuap Khiri Khan 77110</p>
-        <p class="mb-4">081-898-6397<br> ldsbuildora@gmail.com</p>
-        <div class="flex space-x-4 mt-4">
-          <a href="#" class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition">
-            <i class="fab fa-facebook-f text-blue-600 text-2xl"></i>
-          </a>
-          <a href="#" class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="border border-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white hover:text-black transition">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
+<style>
+  /* 🚫 ป้องกันลาก / คลิก / แตะ / บันทึกภาพ */
+  img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    pointer-events: none;
+    touch-action: none;
+  }
 
-      <iframe class="rounded-lg w-full md:w-2/3 h-96"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.2285153321924!2d99.9486!3d12.5684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fda52ff!2sHua%20Hin!5e0!3m2!1sen!2sth!4v1701234567890">
-      </iframe>
-    </div>
-  </section>
+  /* ✅ อนุญาตให้ video เล่นได้ปกติ */
+  video {
+    pointer-events: auto; /* อนุญาตคลิก */
+    touch-action: manipulation; /* รองรับ tap/play */
+    user-select: none;
+  }
 
-  <footer class="bg-white text-black text-center py-4 font-semibold">
-    © 2025 HelloThailand. All rights reserved.
-  </footer>
+  /* ปิดการกดค้างในมือถือ */
+  body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+</style>
 
 <script>
+  // ❌ ปิดคลิกขวาทุกอุปกรณ์
+  document.addEventListener("contextmenu", event => event.preventDefault());
+
+  // ❌ ปิดปุ่มลัดดาวน์โหลด / Inspect (PC)
+  document.addEventListener("keydown", e => {
+    if (
+      (e.ctrlKey && (e.key === 's' || e.key === 'S')) ||
+      (e.ctrlKey && (e.key === 'u' || e.key === 'U')) ||
+      (e.key === 'F12') ||
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i'))
+    ) {
+      e.preventDefault();
+      alert("⛔️ Download & Inspect are disabled");
+    }
+  });
+
+  // ⚙️ ตรวจสอบอุปกรณ์ (Mobile vs Desktop)
+  const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+  if (!isMobile) {
+    // 📱❌ ป้องกัน pinch-zoom เฉพาะ Desktop เท่านั้น
+    document.addEventListener("touchstart", e => {
+      if (e.touches.length > 1) e.preventDefault();
+    }, { passive: false });
+  }
+
+  // 📸 ป้องกัน long-press บนรูปภาพทุกอุปกรณ์
+  document.addEventListener("touchend", e => {
+    if (e.target.tagName === "IMG") e.preventDefault();
+  });
+
+  console.log("🛡️ Protection: Desktop = strict, Mobile = zoom allowed");
+</script>
+
+<!-- ✅ Script: เพิ่ม motion effect -->
+<script>
+  const cards = document.querySelectorAll('.perspective');
+
+  cards.forEach(card => {
+    const img = card.querySelector('img');
+
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left; // ตำแหน่งภายใน div
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (x - centerX) / 20;
+
+      img.style.transform = `
+        scale(1.3)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+      `;
+    });
+
+    // เมื่อเมาส์ออก ให้ภาพกลับสภาพเดิม
+    card.addEventListener('mouseleave', () => {
+      img.style.transform = 'scale(1) rotateX(0deg) rotateY(0deg)';
+    });
+  });
+</script>
+
+<script>
+let mainSwiper = null;
+let thumbSwiper = null;
+let galleryOpen = false;
+
 function openGallery(id) {
   const gallery = document.getElementById(id);
   if (!gallery) return;
 
-  if (window.lgInstance) {
-    window.lgInstance.destroy(true);
-  }
+  const anchors = gallery.querySelectorAll("a[href]");
+  const mainWrapper = document.getElementById("mainWrapper");
+  const thumbWrapper = document.getElementById("thumbWrapper");
 
-  // ✅ อ่าน anchor ทั้งหมด
-  const items = Array.from(gallery.querySelectorAll("a")).map(a => {
+  mainWrapper.innerHTML = "";
+  thumbWrapper.innerHTML = "";
+
+  anchors.forEach(a => {
     const href = a.getAttribute("href");
-    if (!href) return null;
+    if (!href) return;
+    const isVideo = href.toLowerCase().endsWith(".mp4");
 
-    // 🔍 ตรวจวิดีโอ: ถ้าเป็น mp4 ให้เปลี่ยนเป็นภาพ preview
-    if (href.endsWith(".mp4")) {
-      // ใช้รูป preview ชั่วคราว เช่น thumb.jpg ในโฟลเดอร์เดียวกัน
-      const thumb = href.replace(".mp4", ".jpg");
-      return {
-        video: {
-          source: [
-            {
-              scr: href,
-              type: 'video/mp4'
-            }
-          ],
-          attributes: {
-              controls: true,
-              preload: 'metadata'
-          }
-        },
+    // slide หลัก
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide", "flex", "justify-center", "items-center");
 
-        poster: thumb,           
-        thumb: thumb
-      };
+    if (isVideo) {
+      const video = document.createElement("video");
+      video.src = href;
+      video.controls = true;
+      video.className = "max-h-[80vh] rounded-lg bg-black";
+      video.playsInline = true;
+      video.muted = true;
+      slide.appendChild(video);
+    } else {
+      const img = document.createElement("img");
+      img.src = href;
+      img.className = "object-contain max-h-[80vh] rounded-lg";
+      slide.appendChild(img);
     }
+    mainWrapper.appendChild(slide);
 
-    // ✅ ภาพนิ่งปกติ
-    return { src: href, thumb: href };
-  }).filter(Boolean);
-
-  console.log("🎞️ ตรวจไฟล์ใน Gallery:", items);
-
-  // ✅ สร้าง LightGallery ใหม่
-  window.lgInstance = lightGallery(gallery, {
-    dynamic: true,
-    dynamicEl: items,
-    plugins: [lgZoom, lgThumbnail],
-    download: false,
-    closable: true,
-    showMaximizeIcon: true,
-    loop: true
+    // slide thumbnail
+    const thumbSlide = document.createElement("div");
+    thumbSlide.classList.add("swiper-slide", "cursor-pointer", "flex", "items-center", "justify-center");
+    const thumbImg = document.createElement("img");
+    thumbImg.src = isVideo ? href.replace(".mp4", ".jpg") : href;
+    thumbImg.className = "object-cover h-20 w-32 rounded-md opacity-70 hover:opacity-100 transition";
+    thumbSlide.appendChild(thumbImg);
+    thumbWrapper.appendChild(thumbSlide);
   });
 
-  window.lgInstance.openGallery(0);
+  // ✅ เปิด modal
+  const modal = document.getElementById("swiperModal");
+  modal.classList.remove("hidden");
+  galleryOpen = true;
+
+  // ✅ เพิ่ม History state เพื่อจับปุ่ม Back
+  history.pushState({ gallery: true }, "", "#gallery");
+
+  // ถ้ามี instance เดิม ให้ลบทิ้ง
+  if (mainSwiper) mainSwiper.destroy();
+  if (thumbSwiper) thumbSwiper.destroy();
+
+  // ✅ สร้าง swiper ย่อยก่อน
+  thumbSwiper = new Swiper(".thumbSwiper", {
+    spaceBetween: 5,
+    slidesPerView: 7,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  // ✅ สร้าง swiper หลัก
+  mainSwiper = new Swiper(".mainSwiper", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    thumbs: {
+      swiper: thumbSwiper,
+    },
+    on: {
+      slideChange: function () {
+        document.querySelectorAll(".mainSwiper video").forEach(v => v.pause());
+        const active = document.querySelector(".swiper-slide-active video");
+        if (active) active.play().catch(()=>{});
+      }
+    }
+  });
+
+  // ✅ เมื่อผู้ใช้กดปุ่ม back (มือถือหรือ desktop)
+  window.onpopstate = (event) => {
+    if (galleryOpen) {
+      closeGallery();
+    }
+  };
+}
+
+function closeGallery() {
+  const modal = document.getElementById("swiperModal");
+  modal.classList.add("hidden");
+
+  document.querySelectorAll(".mainSwiper video").forEach(v => v.pause());
+  if (mainSwiper) mainSwiper.destroy();
+  if (thumbSwiper) thumbSwiper.destroy();
+
+  galleryOpen = false;
+
+  // ✅ ถ้ามี state #gallery ใน URL → กลับไป state เดิม
+  if (window.location.hash === "#gallery") {
+    history.back();
+  }
 }
 </script>
 
+  <script>
+  // โหลด Navbar
+  fetch("../navbar.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("navbar").innerHTML = data);
+
+  // โหลด Footer
+  fetch("../th/footbar.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
 </body>
+
+</body>
+
+
+<div id="swiperModal" class="fixed inset-0 bg-black/90 hidden flex-col items-center justify-center z-[9999]">
+  <div class="relative w-[95%] h-[90%] flex flex-col gap-2">
+
+    <!-- ปุ่มปิด -->
+    <button onclick="closeGallery()" class="absolute top-4 right-4 text-white text-3xl z-50">✕</button>
+
+    <!-- Swiper หลัก (ภาพใหญ่ / วิดีโอ) -->
+    <div class="swiper mainSwiper w-full flex-1">
+      <div class="swiper-wrapper" id="mainWrapper"></div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper thumbnail -->
+    <div class="swiper thumbSwiper w-full h-24">
+      <div class="swiper-wrapper" id="thumbWrapper"></div>
+    </div>
+
+  </div>
+</div>
+
 </html>
