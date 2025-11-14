@@ -17,25 +17,110 @@
 </head>
 <body class="bg-white text-gray-900">
 
-   <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-black px-2 py-4">
-  <div class="flex items-center gap-[10px] flex-grow">
-    <a href="#" class="flex items-center">
-      <img src="../img/logo.png" alt="Alustem Logo" class="h-14 w-32">
-    </a>
+  <!-- Navbar -->
+    <nav class="flex items-center justify-between bg-black px-2 py-4">
+    <div class="flex items-center gap-[20px] flex-grow">
+      <a href="#" class="flex items-center">
+        <img src="../img/logo.png" alt="Alustem Logo" class="h-12 w-36">
+      </a>
 
-    <input type="text" placeholder="Search"
-      class="flex-grow bg-[#3b1616] text-white rounded px-3 py-2 placeholder-gray-300 outline-none h-14 w-32 sm:w-48 md:w-64 lg:w-96">
-  </div>
+    <!-- กล่องค้นหา (มี Suggestion) -->
+    <div class="relative w-full max-w-[870px]">
+      <input 
+        type="text" 
+        id="searchBox"
+        placeholder="ค้นหาสินค้า เช่น ประตู หน้าต่าง..."
+        class="flex-grow w-full bg-[#3b1616] text-white rounded px- py-2 placeholder-gray-300 outline-none 
+              h-12"
+        oninput="showSuggestions()"
+        onkeydown="handleEnter(event)"
+      >
 
-    <ul class="flex space-x-10 text-xl ml-10">
+      <!-- 🔽 Suggestion Dropdown -->
+      <ul id="suggestionList" 
+          class="absolute left-0 top-full mt-1 w-full bg-white text-gray-800 rounded shadow-lg hidden z-50">
+      </ul>
+    </div>
+
+    <script>
+    const suggestions = [
+      { text: "ประตูและหน้าต่างบานเปิด", keywords: ["บานเปิด", "casement"], link: "casement.html" },
+      { text: "หน้าต่างบานกระทุ้ง", keywords: ["กระทุ้ง", "awning"], link: "awning.html" },
+      { text: "ประตูบานเลื่อน", keywords: ["บานเลื่อน", "sliding"], link: "sliding.html" },
+      { text: "ประตูบานเฟี้ยม", keywords: ["บานเฟี้ยม", "bifold"], link: "bifold.html" },
+      { text: "ประตูบานแขวน", keywords: ["บานแขวน", "hanging"], link: "hanging.html" },
+      { text: "ประตูบานพิเศษ", keywords: ["พิเศษ", "special"], link: "special.html" }
+    ];
+
+    function showSuggestions() {
+      const input = document.getElementById("searchBox");
+      const list = document.getElementById("suggestionList");
+      const value = input.value.toLowerCase().trim();
+      list.innerHTML = "";
+
+      if (!value) {
+        list.classList.add("hidden");
+        return;
+      }
+
+      const matched = suggestions.filter(item => 
+        item.text.toLowerCase().includes(value) || 
+        item.keywords.some(k => k.includes(value))
+      );
+
+      if (matched.length === 0) {
+        list.classList.add("hidden");
+        return;
+      }
+
+      matched.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item.text;
+        li.className = "px-4 py-2 hover:bg-red-600 hover:text-white cursor-pointer transition";
+        li.onclick = () => window.location.href = item.link;
+        list.appendChild(li);
+      });
+
+      list.classList.remove("hidden");
+    }
+
+    // ✅ เมื่อกด Enter แล้ว Redirect โดยอัตโนมัติ
+    function handleEnter(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        const input = document.getElementById("searchBox");
+        const value = input.value.toLowerCase().trim();
+        const match = suggestions.find(item => 
+          item.text.toLowerCase().includes(value) || 
+          item.keywords.some(k => value.includes(k))
+        );
+
+        if (match) {
+          window.location.href = match.link;
+        } else {
+          alert("ไม่พบคำที่ค้นหาในระบบ");
+        }
+      }
+    }
+
+    // ✅ ปิด dropdown เมื่อคลิกนอกกล่อง
+    document.addEventListener("click", (e) => {
+      const list = document.getElementById("suggestionList");
+      const input = document.getElementById("searchBox");
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.classList.add("hidden");
+      }
+    });
+    </script>
+  
+    <ul class="flex space-x-8 text-xl ml-6">
       <li><a href="index.html" class="text-white hover:text-red-500"> หน้าหลัก </a></li>
       <li><a href="gallery.html" class="text-white hover:text-red-500"> แกลเลอรี่ผลงาน </a></li>
       <li><a href="contact.html" class="text-white hover:text-red-500"> ติดต่อเรา </a></li>
     </ul>
 
-    <div class="flex items-center space-x-2 text-xl ml-10">
-      <a href="#" id="langBtn" class="text-white font-bold">TH</a>
+    <div class="flex items-center space-x-2 text-xl ml-6">
+      <a href="#" id="langBtn" class="text-white font-bold"> TH </a>
     </div>
   </nav>
 
@@ -163,7 +248,7 @@
       height: 110%;
       width: clamp(700px, 80vw, 2200px);
       background-color: #315c4d;
-      clip-path: polygon(0 0, 70% 0, 62% 100%, 0% 100%);
+      clip-path: polygon(0 0, 63% 0, 57% 100%, 0% 100%);
       opacity: 0.95;
       border-top-left-radius: 6px;
       border-bottom-left-radius: 6px;

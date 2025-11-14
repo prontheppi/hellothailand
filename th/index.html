@@ -79,7 +79,112 @@
 
 <body class="bg-black text-white">
 
-  <div id="navbar"></div>
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between bg-black px-2 py-4">
+    <div class="flex items-center gap-[20px] flex-grow">
+      <a href="#" class="flex items-center">
+        <img src="../img/logo.png" alt="Alustem Logo" class="h-12 w-36">
+      </a>
+
+    <!-- กล่องค้นหา (มี Suggestion) -->
+    <div class="relative w-full max-w-[870px]">
+      <input 
+        type="text" 
+        id="searchBox"
+        placeholder="ค้นหาสินค้า เช่น ประตู หน้าต่าง..."
+        class="flex-grow w-full bg-[#3b1616] text-white rounded px- py-2 placeholder-gray-300 outline-none 
+              h-12"
+        oninput="showSuggestions()"
+        onkeydown="handleEnter(event)"
+      >
+
+      <!-- 🔽 Suggestion Dropdown -->
+      <ul id="suggestionList" 
+          class="absolute left-0 top-full mt-1 w-full bg-white text-gray-800 rounded shadow-lg hidden z-50">
+      </ul>
+    </div>
+
+    <script>
+    const suggestions = [
+      { text: "ประตูและหน้าต่างบานเปิด", keywords: ["บานเปิด", "casement"], link: "casement.html" },
+      { text: "หน้าต่างบานกระทุ้ง", keywords: ["กระทุ้ง", "awning"], link: "awning.html" },
+      { text: "ประตูบานเลื่อน", keywords: ["บานเลื่อน", "sliding"], link: "sliding.html" },
+      { text: "ประตูบานเฟี้ยม", keywords: ["บานเฟี้ยม", "bifold"], link: "bifold.html" },
+      { text: "ประตูบานแขวน", keywords: ["บานแขวน", "hanging"], link: "hanging.html" },
+      { text: "ประตูบานพิเศษ", keywords: ["พิเศษ", "special"], link: "special.html" }
+    ];
+
+    function showSuggestions() {
+      const input = document.getElementById("searchBox");
+      const list = document.getElementById("suggestionList");
+      const value = input.value.toLowerCase().trim();
+      list.innerHTML = "";
+
+      if (!value) {
+        list.classList.add("hidden");
+        return;
+      }
+
+      const matched = suggestions.filter(item => 
+        item.text.toLowerCase().includes(value) || 
+        item.keywords.some(k => k.includes(value))
+      );
+
+      if (matched.length === 0) {
+        list.classList.add("hidden");
+        return;
+      }
+
+      matched.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item.text;
+        li.className = "px-4 py-2 hover:bg-red-600 hover:text-white cursor-pointer transition";
+        li.onclick = () => window.location.href = item.link;
+        list.appendChild(li);
+      });
+
+      list.classList.remove("hidden");
+    }
+
+    // ✅ เมื่อกด Enter แล้ว Redirect โดยอัตโนมัติ
+    function handleEnter(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        const input = document.getElementById("searchBox");
+        const value = input.value.toLowerCase().trim();
+        const match = suggestions.find(item => 
+          item.text.toLowerCase().includes(value) || 
+          item.keywords.some(k => value.includes(k))
+        );
+
+        if (match) {
+          window.location.href = match.link;
+        } else {
+          alert("ไม่พบคำที่ค้นหาในระบบ");
+        }
+      }
+    }
+
+    // ✅ ปิด dropdown เมื่อคลิกนอกกล่อง
+    document.addEventListener("click", (e) => {
+      const list = document.getElementById("suggestionList");
+      const input = document.getElementById("searchBox");
+      if (!input.contains(e.target) && !list.contains(e.target)) {
+        list.classList.add("hidden");
+      }
+    });
+    </script>
+  
+    <ul class="flex space-x-8 text-xl ml-6">
+      <li><a href="index.html" class="text-white hover:text-red-500"> หน้าหลัก </a></li>
+      <li><a href="gallery.html" class="text-white hover:text-red-500"> แกลเลอรี่ผลงาน </a></li>
+      <li><a href="contact.html" class="text-white hover:text-red-500"> ติดต่อเรา </a></li>
+    </ul>
+
+    <div class="flex items-center space-x-2 text-xl ml-6">
+      <a href="#" id="langBtn" class="text-white font-bold"> TH </a>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <section class="flex flex-col items-center justify-center bg-[url('../img/windows-doors.jpg')] bg-cover bg-center text-center text-white py-4 md:py-10">
@@ -426,8 +531,8 @@
   <!-- Gallery Section -->
   <section id="project-gallery" class="max-w-6xl mx-auto py-16 px-6">
     
-    <div class="flex items-center justify-left gap-[50%] mb-6">
-        <h2 class="text-5xl font-bold text-gray-200"> แกลเลอรี่ผลงาน </h2>
+    <div class="flex items-center justify-left gap-[56%] mb-6">
+        <h2 class="text-4xl font-bold text-gray-200"> แกลเลอรี่ผลงาน </h2>
         <a href="gallery.html" 
           class="inline-block bg-green-900 hover:bg-green-700 text-white px-[5.5%] py-2 rounded-lg font-semibold text-lg md:text-lg ">
           โปรเจค อื่นๆ ...
@@ -664,7 +769,7 @@
         <!-- Overlay with "View All" + count -->
         <div
           class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out"
-          onclick="openGallery('project4-gallery')">
+          onclick="openGallery('project6-gallery')">
           <span class="text-white font-bold text-lg bg-white/10 px-4 py-2 rounded-lg mb-2 border">
             แสดงทั้งหมด
           </span>
@@ -689,7 +794,7 @@
   <div class="max-w-6xl mx-auto px-6">
 
         
-    <div class="flex items-center justify-left gap-[67%] mb-6">
+    <div class="flex items-center justify-left gap-[77%] mb-8">
         <h2 class="text-5xl font-bold text-gray-200"> รีวิว </h2>
         <a href="gallery.html" 
           class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-[5%] py-2 rounded-lg font-semibold text-lg md:text-xl ">
@@ -723,8 +828,30 @@
   </div>
 </section>
 
-<div id="footer"></div>
-  
+
+  <!-- Contact Section -->
+  <section class="bg-black text-white py-16">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 px-6">
+      <div>
+        <p p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed max-w-5xl py-3 text-gray-200">23/655 Pannasap 8 Soi Hua-Hin88,<br> Hua-Hin, Prachuap Khiri Khan 77110</p>
+        <p class="text-lg md:text-xl lg:text-3xl mb-1 leading-relaxed max-w-5xl py-3 text-gray-200">081 - 898 - 6397<br> ldsbuildora@gmail.com</p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="border border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="border border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="border border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <iframe class="rounded-lg w-full md:w-2/5 h-64"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.2285153321924!2d99.9486!3d12.5684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fda52ff!2sHua%20Hin!5e0!3m2!1sen!2sth!4v1701234567890">
+      </iframe>
+      
+    </div>
+  </section>
+
+  <footer class="bg-white text-black text-center py-4 font-semibold">
+    © 2025 HelloThailand. All rights reserved.
+  </footer>
 
 <style>
   /* 🚫 ป้องกันลาก / คลิก / แตะ / บันทึกภาพ */
@@ -936,19 +1063,6 @@ function closeGallery() {
   }
 }
 </script>
-
-  <script>
-  // โหลด Navbar
-  fetch("../navbar.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("navbar").innerHTML = data);
-
-  // โหลด Footer
-  fetch("../th/footbar.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-  </script>
-</body>
 
 </body>
 
